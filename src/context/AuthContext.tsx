@@ -7,6 +7,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { Platform } from 'react-native';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 interface AuthContextType {
   user: any | null;
@@ -58,6 +59,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setUser = async (nextUser: any | null) => {
+    // Revoke the server session when the app clears an authenticated user.
+    if (!nextUser && user?.token) {
+      try {
+        await fetch(`${API_BASE_URL}/api/logout`, {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${user.token}` },
+        });
+      } catch {
+        // Local logout must still complete if the backend is unreachable.
+      }
+    }
+
     setStoredUser(nextUser);
     setUserToken(nextUser?.token || null);
 

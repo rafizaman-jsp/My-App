@@ -14,17 +14,20 @@ import {
     TouchableOpacity,
     ScrollView,
     StyleSheet,
-    Alert,
     Platform,
     FlatList,
     Modal,
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import { useFeedback } from '../../context/FeedbackContext';
+import { useAuth } from '../../context/AuthContext';
+import { Alert } from '../../utils/appAlert';
 
 // ==================== CONSTANTS ====================
 
 const API_PORT = 8080;
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '192.168.0.106';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 const LOCALHOST = 'http://localhost';
 
 /**
@@ -55,7 +58,9 @@ interface TimeSlot {
 
 // ==================== COMPONENT ====================
 
-const BookAppointmentScreen = ({ route }: any) => {
+const BookAppointmentScreen = ({ navigation, route }: any) => {
+    const { user, userToken, isAuthLoading } = useAuth();
+
     // ==================== STATE MANAGEMENT ====================
 
     /** List of doctors fetched from backend */
@@ -64,7 +69,7 @@ const BookAppointmentScreen = ({ route }: any) => {
     /** Selected doctor ID */
     const [selectedDoctorId, setSelectedDoctorId] = useState<number | null>(null);
 
-    /** Available dates for selected doctor (day of week: 1-7) */
+    /** Available dates for selected doctor (JavaScript day of week: 0-6) */
     const [availableDays, setAvailableDays] = useState<number[]>([]);
 
     /** Time slots available for selected date */
@@ -88,17 +93,26 @@ const BookAppointmentScreen = ({ route }: any) => {
     /** Current calendar view date */
     const [calendarDate, setCalendarDate] = useState(new Date());
 
-    /** User token for authentication (from login) */
-    const userToken = route.params?.user?.token || '';
-
     // ==================== EFFECTS ====================
 
     /**
      * Fetch list of doctors when component mounts
      */
     useEffect(() => {
+        if (isAuthLoading) return;
+        if (!user?.token || !user?.userId || user.role !== 'patient') {
+            navigation.replace('LoginScreen');
+            return;
+        }
         fetchDoctors();
-    }, []);
+    }, [isAuthLoading, user?.token, user?.userId, user?.role]);
+
+    useEffect(() => {
+        const doctorId = Number(route.params?.selectedDoctorId);
+        if (Number.isInteger(doctorId) && doctorId > 0) {
+            setSelectedDoctorId(doctorId);
+        }
+    }, [route.params?.selectedDoctorId]);
 
     /**
      * Load availability when doctor changes
@@ -229,6 +243,7 @@ const BookAppointmentScreen = ({ route }: any) => {
                         setSelectedDate(null);
                         setSelectedTime(null);
                         setTimeSlots([]);
+                        navigation.replace('PatientProfile', { user });
                     },
                 },
             ]);
@@ -288,8 +303,13 @@ const BookAppointmentScreen = ({ route }: any) => {
             calendarDate.getMonth(),
             dayOfMonth
         );
-        const dayOfWeek = date.getDay(); // 0-6 (Sun-Sat)
-        return availableDays.includes(dayOfWeek);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        if (date < today) return false;
+
+        // Match the backend and JavaScript Date.getDay(): 0 Sunday through 6 Saturday.
+        const javascriptDay = date.getDay();
+        return availableDays.includes(javascriptDay);
     };
 
     /**
@@ -475,7 +495,10 @@ const BookAppointmentScreen = ({ route }: any) => {
                     <View style={styles.pickerContainer}>
                         <Picker
                             selectedValue={selectedDoctorId}
-                            onValueChange={(value) => setSelectedDoctorId(value)}
+                            onValueChange={(value) => {
+                                const doctorId = Number(value);
+                                setSelectedDoctorId(Number.isInteger(doctorId) && doctorId > 0 ? doctorId : null);
+                            }}
                             style={styles.picker}
                         >
                             <Picker.Item

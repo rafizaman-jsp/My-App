@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import {
+    ActivityIndicator,
     View,
     Text,
     TextInput,
     TouchableOpacity,
     ScrollView,
     StyleSheet,
-    Alert,
+    Platform,
 } from 'react-native';
+import { Alert } from '../../utils/appAlert';
+
+const API_PORT = 8080;
+const ANDROID_LOCAL_IP = '192.168.0.106';
+const LOCALHOST = 'http://localhost';
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL?.trim().replace(/\/$/, '') ||
+    (Platform.OS === 'android' ? `http://${ANDROID_LOCAL_IP}:${API_PORT}` : `${LOCALHOST}:${API_PORT}`);
 
 const PatientRegistrationScreen = () => {
     const [patient, setPatient] = useState({
@@ -17,26 +25,63 @@ const PatientRegistrationScreen = () => {
         age: '',
         phone: '',
         email: '',
-        address: '',
-        bloodGroup: '',
+        password: '',
+        confirmPassword: '',
     });
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (key: string, value: string) => {
         setPatient({ ...patient, [key]: value });
     };
 
-    const registerPatient = () => {
+    const registerPatient = async () => {
+        // Match the backend registration rules before making the network request.
+        const age = Number(patient.age.trim());
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (
-            !patient.firstName ||
-            !patient.lastName ||
-            !patient.phone
+            !patient.firstName.trim() ||
+            !patient.lastName.trim() ||
+            !patient.gender ||
+            !patient.age.trim() ||
+            !Number.isInteger(age) ||
+            age < 0 ||
+            age > 150 ||
+            !patient.phone.trim() ||
+            !emailPattern.test(patient.email.trim()) ||
+            !patient.password ||
+            patient.password.length < 4 ||
+            patient.password !== patient.confirmPassword
         ) {
-            Alert.alert('Validation', 'Please fill all required fields.');
+            Alert.alert('Validation', 'Complete all fields, use at least 4 password characters, and make sure both passwords match.');
             return;
         }
 
-        // TODO: Connect with backend API
-        Alert.alert('Success', 'Patient Registered Successfully');
+        setLoading(true);
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/signup`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    name: `${patient.firstName.trim()} ${patient.lastName.trim()}`,
+                    age: patient.age.trim(),
+                    gender: patient.gender.trim(),
+                    phone: patient.phone.trim(),
+                    email: patient.email.trim(),
+                    password: patient.password,
+                }).toString(),
+            });
+            const result = await response.json();
+            if (!response.ok || !result.success) {
+                Alert.alert('Registration failed', result.message || 'Unable to register patient.');
+                return;
+            }
+            Alert.alert('Success', 'Patient registered successfully. You can now log in.');
+        } catch {
+            Alert.alert('Connection error', `Cannot reach the server at ${API_BASE_URL}.`);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -58,12 +103,20 @@ const PatientRegistrationScreen = () => {
                     onChangeText={(text) => handleChange('lastName', text)}
                 />
 
-                <TextInput
-                    style={styles.input}
-                    placeholder="Gender"
-                    value={patient.gender}
-                    onChangeText={(text) => handleChange('gender', text)}
-                />
+                {/* Use fixed options so gender always matches the database constraint. */}
+                <View style={styles.genderRow}>
+                    {['Male', 'Female'].map((gender) => (
+                        <TouchableOpacity
+                            key={gender}
+                            style={[styles.genderButton, patient.gender === gender && styles.genderButtonSelected]}
+                            onPress={() => handleChange('gender', gender)}
+                        >
+                            <Text style={[styles.genderButtonText, patient.gender === gender && styles.genderButtonTextSelected]}>
+                                {gender}
+                            </Text>
+                        </TouchableOpacity>
+                    ))}
+                </View>
 
                 <TextInput
                     style={styles.input}
@@ -91,24 +144,25 @@ const PatientRegistrationScreen = () => {
 
                 <TextInput
                     style={styles.input}
-                    placeholder="Blood Group"
-                    value={patient.bloodGroup}
-                    onChangeText={(text) => handleChange('bloodGroup', text)}
+                    placeholder="Password"
+                    secureTextEntry
+                    value={patient.password}
+                    onChangeText={(text) => handleChange('password', text)}
                 />
 
                 <TextInput
-                    style={[styles.input, styles.address]}
-                    placeholder="Address"
-                    multiline
-                    value={patient.address}
-                    onChangeText={(text) => handleChange('address', text)}
+                    style={styles.input}
+                    placeholder="Confirm Password"
+                    secureTextEntry
+                    value={patient.confirmPassword}
+                    onChangeText={(text) => handleChange('confirmPassword', text)}
                 />
 
                 <TouchableOpacity
                     style={styles.button}
                     onPress={registerPatient}
                 >
-                    <Text style={styles.buttonText}>Register Patient</Text>
+                    {loading ? <ActivityIndicator color="#fff" /> : <Text style={styles.buttonText}>Register Patient</Text>}
                 </TouchableOpacity>
             </View>
         </ScrollView>
@@ -147,6 +201,36 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         height: 50,
         marginBottom: 15,
+    },
+
+    genderRow: {
+        flexDirection: 'row',
+        gap: 10,
+        marginBottom: 15,
+    },
+
+    genderButton: {
+        flex: 1,
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: '#ddd',
+        borderRadius: 10,
+        padding: 15,
+        alignItems: 'center',
+    },
+
+    genderButtonSelected: {
+        backgroundColor: '#E3F2FD',
+        borderColor: '#1565C0',
+    },
+
+    genderButtonText: {
+        color: '#555',
+        fontWeight: '600',
+    },
+
+    genderButtonTextSelected: {
+        color: '#1565C0',
     },
 
     address: {

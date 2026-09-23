@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useColorScheme } from 'react-native';
 import Navigation from "./navigation";
 import { FeedbackProvider } from './context/FeedbackContext';
+import { AuthProvider } from './context/AuthContext';
 import FeedbackModal from './components/FeedbackModal';
 
 
@@ -33,16 +34,18 @@ export function App() {
 
 
   return (
-    <FeedbackProvider>
-      <Navigation
-        theme={theme}
-        linking={linking}
-        onReady={() => {
-          SplashScreen.hideAsync();
-        }}
-      />
-      <FeedbackModal />
-    </FeedbackProvider>
+    <AuthProvider>
+      <FeedbackProvider>
+        <Navigation
+          theme={theme}
+          linking={linking}
+          onReady={() => {
+            SplashScreen.hideAsync();
+          }}
+        />
+        <FeedbackModal />
+      </FeedbackProvider>
+    </AuthProvider>
   );
 }
 

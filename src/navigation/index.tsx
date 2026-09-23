@@ -12,6 +12,8 @@
 
 import React, { useState } from "react";
 import {
+  Modal,
+  Pressable,
   TouchableOpacity,
   Text,
   View,
@@ -29,7 +31,17 @@ import PatientRegistrationScreen from "./screens/PatientRegistrationScreen";
 import PatientProfileScreen from "./screens/PatientProfile";
 import BookAppointmentScreen from "./screens/BookAppointmentScreen";
 import ChangeAppointmentTimeScreen from "./screens/ChangeAppointmentTimeScreen";
+import ChangePasswordScreen from "./screens/ChangePasswordScreen";
+import DoctorDashboardScreen from "./screens/DoctorDashboardScreen";
+import AdminDashboardScreen from "./screens/AdminDashboardScreen";
+import AdminOverviewScreen from "./screens/AdminOverviewScreen";
+import AdminDoctorsScreen from "./screens/AdminDoctorsScreen";
+import AdminAddDoctorScreen from "./screens/AdminAddDoctorScreen";
+import AdminEditDoctorScreen from "./screens/AdminEditDoctorScreen";
+import AdminAddAdminScreen from "./screens/AdminAddAdminScreen";
+import AdminRecordsScreen from "./screens/AdminRecordsScreen";
 import { useFeedback } from "../context/FeedbackContext";
+import { useAuth } from "../context/AuthContext";
 
 // ==================== NAVIGATION SETUP ====================
 
@@ -43,10 +55,17 @@ const menuItems = [
   { title: "Home", screen: "Home" },
   { title: "About", screen: "About" },
   { title: "Login", screen: "LoginScreen" },
-  { title: "Course Dashboard", screen: "CourseDashboard" },
   { title: "Patient Profile", screen: "PatientProfile" }, // After login redirect goes here
   { title: "Patient Registration", screen: "PatientRegistrationScreen" },
   { title: "Book Appointment", screen: "BookAppointment" },
+  { title: "Change Password", screen: "ChangePassword" },
+  { title: "Doctor Dashboard", screen: "DoctorDashboard" },
+  { title: "Admin Dashboard", screen: "AdminDashboard" },
+  { title: "Manage Doctors", screen: "AdminDoctors" },
+  { title: "Add Administrator", screen: "AdminAddAdmin" },
+  { title: "Patients", screen: "AdminPatients" },
+  { title: "Appointments", screen: "AdminAppointments" },
+  { title: "Feedback", screen: "AdminFeedback" },
 ];
 
 // ==================== MENU DROPDOWN COMPONENT ====================
@@ -61,7 +80,9 @@ const menuItems = [
  */
 function MenuDropdown({ navigation }: { navigation: any }) {
   // ==================== STATE ====================
-  
+
+  const { user, setUser } = useAuth();
+
   /** Controls dropdown visibility */
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -76,6 +97,29 @@ function MenuDropdown({ navigation }: { navigation: any }) {
     navigation.navigate(screenName);
   };
 
+  // ==================== Logout Handler ====================
+  const handleLogout = async () => {
+    setMenuOpen(false);
+
+    await setUser(null);
+
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "LoginScreen" }],
+    });
+  };
+
+  const visibleMenuItems = menuItems.filter((item) => {
+    if (item.screen === "PatientProfile" || item.screen === "BookAppointment") {
+      return user?.role === "patient";
+    }
+    if (item.screen === "DoctorDashboard") return user?.role === "doctor";
+    if (item.screen === "AdminDashboard") return user?.role === "admin";
+    if (item.screen === "AdminDoctors" || item.screen === "AdminAddAdmin" || item.screen.startsWith("Admin")) return user?.role === "admin";
+    if (item.screen === "ChangePassword") return Boolean(user);
+    return item.screen !== "LoginScreen" || !user;
+  });
+
   // ==================== RENDER ====================
 
   return (
@@ -84,25 +128,63 @@ function MenuDropdown({ navigation }: { navigation: any }) {
       <TouchableOpacity
         onPress={() => setMenuOpen((prev) => !prev)}
         style={styles.menuButton}
+        accessibilityLabel="Open navigation menu"
+        accessibilityRole="button"
       >
         <Text style={styles.menuIcon}>☰</Text>
       </TouchableOpacity>
 
       {/* Dropdown Menu - Shows when menuOpen is true */}
-      {menuOpen && (
-        <View style={styles.dropdown}>
-          {menuItems.map((item) => (
-            <TouchableOpacity
-              key={item.screen}
-              style={styles.dropdownItem}
-              onPress={() => handleNavigate(item.screen)}
-            >
-              <Text style={styles.dropdownText}>{item.title}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      )}
+      <Modal
+        visible={menuOpen}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setMenuOpen(false)}
+      >
+        <Pressable
+          style={styles.menuOverlay}
+          onPress={() => setMenuOpen(false)}
+        >
+          <View style={styles.dropdown}>
+            {visibleMenuItems.map((item) => (
+              <TouchableOpacity
+                key={item.screen}
+                style={styles.dropdownItem}
+                onPress={() => handleNavigate(item.screen)}
+              >
+                <Text style={styles.dropdownText}>{item.title}</Text>
+              </TouchableOpacity>
+            ))}
+
+            {user ? (
+              <TouchableOpacity
+                style={styles.logoutMenuItem}
+                onPress={handleLogout}
+              >
+                <Text style={styles.logoutMenuText}>Log out</Text>
+              </TouchableOpacity>
+            ) : null}
+          </View>
+        </Pressable>
+      </Modal>
     </View>
+  );
+}
+
+function BackButton({ navigation }: { navigation: any }) {
+  if (!navigation.canGoBack()) {
+    return null;
+  }
+
+  return (
+    <TouchableOpacity
+      onPress={() => navigation.goBack()}
+      style={styles.backButton}
+      accessibilityLabel="Go back"
+      accessibilityRole="button"
+    >
+      <Text style={styles.backIcon}>‹</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -135,7 +217,7 @@ export default function Navigation({
   linking?: any;
   onReady?: any;
 }) {
-  const { user, isAuthLoading } = useFeedback();
+  const { user, isAuthLoading } = useAuth();
 
   if (isAuthLoading) {
     return null;
@@ -148,10 +230,10 @@ export default function Navigation({
       onReady={onReady}
     >
       <Stack.Navigator
-        initialRouteName={user ? "PatientProfile" : "Home"}
+        initialRouteName={!user ? "Home" : user.role === "patient" ? "PatientProfile" : user.role === "doctor" ? "DoctorDashboard" : "AdminDashboard"}
         screenOptions={({ navigation }) => ({
           // ==================== HEADER STYLING ====================
-          
+
           headerStyle: {
             backgroundColor: "#000000", // Black header background
           },
@@ -161,25 +243,19 @@ export default function Navigation({
             fontSize: 20,
           },
           headerTitleAlign: "center", // Center the screen title
-          
+
           // ==================== HEADER COMPONENTS ====================
-          
-          // Left header - Menu dropdown
-          headerLeft: () => <MenuDropdown navigation={navigation} />,
-          
-          // Right header - Settings button
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => alert("Settings clicked")}
-              style={{ marginRight: 12 }}
-            >
-              <Text style={{ color: "#FFFFFF", fontSize: 22 }}>⚙️</Text>
-            </TouchableOpacity>
-          ),
+
+          // Left header - Back navigation
+          headerLeft: () => <BackButton navigation={navigation} />,
+
+          // Right header - Menu dropdown
+          headerRight: () => <MenuDropdown navigation={navigation} />,
+
         })}
       >
         {/* ==================== PUBLIC SCREENS ==================== */}
-        
+
         {/* Home Screen - Initial landing page */}
         <Stack.Screen
           name="Home"
@@ -193,9 +269,9 @@ export default function Navigation({
           component={AboutScreen}
           options={{ title: "About" }}
         />
-        
+
         {/* ==================== AUTHENTICATION FLOW ==================== */}
-        
+
         {/* Login Screen - User authentication */}
         <Stack.Screen
           name="LoginScreen"
@@ -209,9 +285,9 @@ export default function Navigation({
           component={PatientRegistrationScreen}
           options={{ title: "Patient Registration" }}
         />
-        
+
         {/* ==================== PROTECTED SCREENS ==================== */}
-        
+
         {/* 
          * Patient Profile Screen - Main dashboard after login
          * Receives user data from LoginScreen via navigation params
@@ -238,6 +314,32 @@ export default function Navigation({
           component={ChangeAppointmentTimeScreen}
           options={{ title: "Change Appointment Time" }}
         />
+
+        <Stack.Screen
+          name="ChangePassword"
+          component={ChangePasswordScreen}
+          options={{ title: "Change Password" }}
+        />
+
+        <Stack.Screen
+          name="DoctorDashboard"
+          component={DoctorDashboardScreen}
+          options={{ title: "Doctor Dashboard" }}
+        />
+
+        <Stack.Screen
+          name="AdminDashboard"
+          component={AdminOverviewScreen}
+          options={{ title: "Admin Dashboard" }}
+        />
+        <Stack.Screen name="AdminDoctors" component={AdminDoctorsScreen} options={{ title: "Manage Doctors" }} />
+        <Stack.Screen name="AdminAddDoctor" component={AdminAddDoctorScreen} options={{ title: "Add Doctor" }} />
+        <Stack.Screen name="AdminEditDoctor" component={AdminEditDoctorScreen} options={{ title: "Edit Doctor" }} />
+        <Stack.Screen name="AdminAddAdmin" component={AdminAddAdminScreen} options={{ title: "Add Administrator" }} />
+        <Stack.Screen name="AdminRecords" component={AdminRecordsScreen} initialParams={{ type: 'patients' }} options={{ title: "Admin Records" }} />
+        <Stack.Screen name="AdminPatients" component={AdminRecordsScreen} initialParams={{ type: 'patients' }} options={{ title: "Patients" }} />
+        <Stack.Screen name="AdminAppointments" component={AdminRecordsScreen} initialParams={{ type: 'appointments' }} options={{ title: "Appointments" }} />
+        <Stack.Screen name="AdminFeedback" component={AdminRecordsScreen} initialParams={{ type: 'feedback' }} options={{ title: "Feedback" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -247,11 +349,25 @@ export default function Navigation({
 
 const styles = StyleSheet.create({
   // ==================== MENU WRAPPER ====================
-  
+
   // Container for hamburger menu button
   menuWrapper: {
-    position: "relative",
-    marginLeft: 12,
+    marginRight: 12,
+  },
+
+  backButton: {
+    width: 44,
+    height: 44,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 4,
+  },
+
+  backIcon: {
+    color: "#FFFFFF",
+    fontSize: 34,
+    lineHeight: 38,
+    fontWeight: "300",
   },
 
   // Hamburger menu button styling
@@ -270,16 +386,21 @@ const styles = StyleSheet.create({
 
   // ==================== DROPDOWN MENU ====================
 
+  menuOverlay: {
+    flex: 1,
+    paddingTop: 48,
+    paddingRight: 12,
+    alignItems: "flex-end",
+    backgroundColor: "transparent",
+  },
+
   // Dropdown container - positioned below hamburger menu
   dropdown: {
-    position: "absolute",
-    top: 42, // Position below menu button
-    left: 0,
     width: 220,
     backgroundColor: "#111111", // Dark background
     borderRadius: 10,
     paddingVertical: 8,
-    
+
     // Shadow styling for depth
     elevation: 8, // Android shadow
     shadowColor: "#000", // iOS shadow
@@ -302,5 +423,19 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 15,
     fontWeight: "500",
+  },
+  
+  // Logout menu item styling
+  logoutMenuItem: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderTopWidth: 1,
+    borderTopColor: "#444444",
+  },
+
+  logoutMenuText: {
+    color: "#FF5252",
+    fontSize: 15,
+    fontWeight: "bold",
   },
 });

@@ -18,6 +18,8 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
+  Image,
+  ImageBackground,
   FlatList,
   ScrollView,
   Linking,
@@ -28,7 +30,8 @@ import {
 // ==================== CONSTANTS ====================
 
 const API_PORT = 8080;
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '169.254.31.163';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 const LOCALHOST = 'http://localhost';
 
 /**
@@ -59,6 +62,7 @@ interface HeroSlide {
   id: number;
   title: string;
   subtitle: string;
+  image: ReturnType<typeof require>;
 }
 
 // ==================== COMPONENT ====================
@@ -82,16 +86,25 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
       id: 1,
       title: "Compassionate Care, Every Day",
       subtitle: "Trusted by patients for quality treatment and modern medical support.",
+      image: require('../../assets/hospital1.jpg'),
     },
     {
       id: 2,
       title: "Experienced Doctors",
       subtitle: "Book appointments with specialists and receive timely care.",
+      image: require('../../assets/CTscan.jpg'),
     },
     {
       id: 3,
       title: "Advanced Facilities",
       subtitle: "Enjoy a seamless experience from booking to recovery.",
+      image: require('../../assets/bading.jpg'),
+    },
+    {
+      id: 4,
+      title: "A Clean, Comfortable Environment",
+      subtitle: "Thoughtfully maintained spaces to support every stage of your visit.",
+      image: require('../../assets/cleanCoridoor.jpg'),
     },
   ];
 
@@ -223,15 +236,32 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      {/* ===== HOSPITAL BRANDING ===== */}
+      <View style={styles.brandHeader}>
+        <Image
+          source={require('../../assets/hospital1.jpg')}
+          style={styles.brandLogo}
+          accessibilityLabel="CityCare General Hospital logo"
+        />
+        <View style={styles.brandTextContainer}>
+          <Text style={styles.brandName}>CityCare General Hospital</Text>
+          <Text style={styles.brandTagline}>Trusted care, close to home</Text>
+        </View>
+      </View>
+
       {/* ===== HERO SECTION ===== */}
       <View style={styles.heroSection}>
         {/* Hero Slide */}
-        <View style={styles.heroSlide}>
+        <ImageBackground
+          source={heroSlides[currentSlide].image}
+          style={styles.heroSlide}
+          imageStyle={styles.heroImage}
+        >
           <View style={styles.heroOverlay}>
             <Text style={styles.heroTitle}>{heroSlides[currentSlide].title}</Text>
             <Text style={styles.heroSubtitle}>{heroSlides[currentSlide].subtitle}</Text>
           </View>
-        </View>
+        </ImageBackground>
 
         {/* Slide Navigation Buttons */}
         <View style={styles.sliderNavigation}>
@@ -269,6 +299,25 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
           services. Our expert doctors and advanced facilities ensure quality treatment and
           patient safety.
         </Text>
+      </View>
+
+      {/* ===== FACILITIES SECTION ===== */}
+      <View style={styles.facilitiesSection}>
+        <Text style={styles.sectionTitle}>Our Facilities</Text>
+        <View style={styles.facilityGrid}>
+          <View style={styles.facilityItem}>
+            <Image source={require('../../assets/cleanCoridoor.jpg')} style={styles.facilityImage} />
+            <Text style={styles.facilityLabel}>Comfortable care spaces</Text>
+          </View>
+          <View style={styles.facilityItem}>
+            <Image source={require('../../assets/CTscan.jpg')} style={styles.facilityImage} />
+            <Text style={styles.facilityLabel}>Advanced diagnostics</Text>
+          </View>
+          <View style={styles.facilityItem}>
+            <Image source={require('../../assets/OT.jpg')} style={styles.facilityImage} />
+            <Text style={styles.facilityLabel}>Modern operating theatre</Text>
+          </View>
+        </View>
       </View>
 
       {/* ===== DOCTORS SECTION ===== */}
@@ -369,22 +418,80 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FA',
   },
 
+  // ===== HOSPITAL BRANDING =====
+
+  brandHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#D9E3EC',
+  },
+
+  brandLogo: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    marginRight: 12,
+  },
+
+  brandTextContainer: {
+    flex: 1,
+  },
+
+  brandName: {
+    color: '#123B5D',
+    fontSize: 20,
+    fontWeight: '800',
+  },
+
+  brandTagline: {
+    color: '#5B7182',
+    fontSize: 13,
+    marginTop: 3,
+  },
+
   // ===== HERO SECTION =====
 
   heroSection: {
     marginBottom: 20,
+    marginHorizontal: 12,
+    borderRadius: 18,
+    overflow: 'hidden',
+    backgroundColor: '#0B304C',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.18,
+    shadowRadius: 10,
+    elevation: 4,
   },
 
   heroSlide: {
-    height: 220,
-    backgroundColor: '#1565C0',
+    width: '100%',
+    aspectRatio: 9 / 4,
+    overflow: 'hidden',
+    backgroundColor: '#DCEAF2',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
+  heroImage: {
+    width: '100%',
+    height: '100%',
+    alignSelf: 'center',
+    opacity: 0.9,
+    resizeMode: 'contain',
+  },
+
   heroOverlay: {
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingHorizontal: 30,
+    backgroundColor: 'rgba(0, 0, 0, 0.46)',
+    width: '100%',
   },
 
   heroTitle: {
@@ -393,12 +500,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     marginBottom: 10,
+    maxWidth: '75%',
   },
 
   heroSubtitle: {
     fontSize: 16,
     color: '#e3f2fd',
-    textAlign: 'center',
+    textAlign: 'left',
+    maxWidth: '75%',
   },
 
   sliderNavigation: {
@@ -474,6 +583,45 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#555',
     lineHeight: 22,
+  },
+
+  // ===== FACILITIES SECTION =====
+
+  facilitiesSection: {
+    backgroundColor: '#fff',
+    padding: 20,
+    marginHorizontal: 12,
+    marginVertical: 12,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2,
+  },
+
+  facilityGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+
+  facilityItem: {
+    width: '31.5%',
+  },
+
+  facilityImage: {
+    width: '100%',
+    height: 92,
+    borderRadius: 7,
+  },
+
+  facilityLabel: {
+    color: '#456071',
+    fontSize: 12,
+    fontWeight: '600',
+    lineHeight: 16,
+    marginTop: 7,
   },
 
   // ===== DOCTORS SECTION =====

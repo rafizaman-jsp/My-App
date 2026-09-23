@@ -22,16 +22,18 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  Alert,
   Platform,
   ActivityIndicator,
 } from 'react-native';
 import { useFeedback } from '../context/FeedbackContext';
+import { useAuth } from '../context/AuthContext';
+import { Alert } from '../utils/appAlert';
 
 // ==================== CONSTANTS ====================
 
 const API_PORT = 8080;
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '192.168.0.106';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 const LOCALHOST = 'http://localhost';
 
 /**
@@ -51,7 +53,8 @@ const API_BASE_URL = getApiBaseUrl();
 export default function FeedbackModal() {
   // ==================== HOOKS ====================
 
-  const { isVisible, closeFeedback, userToken } = useFeedback();
+  const { isVisible, closeFeedback } = useFeedback();
+  const { userToken } = useAuth();
 
   // ==================== STATE ====================
 

@@ -19,17 +19,20 @@ import {
     StyleSheet,
     ScrollView,
     TouchableOpacity,
-    Alert,
     Platform,
     ActivityIndicator,
 } from 'react-native';
 import { useFeedback } from '../../context/FeedbackContext';
+import { useAuth } from '../../context/AuthContext';
+import { confirmAction } from '../../utils/confirmAction';
+import { Alert } from '../../utils/appAlert';
 
 // ==================== CONSTANTS ====================
 
 /** API base URL - matches LoginScreen configuration */
 const API_PORT = 8080;
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '192.168.0.106';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 const LOCALHOST = 'http://localhost';
 
 /**
@@ -62,10 +65,15 @@ const API_BASE_URL = getApiBaseUrl();
 export default function PatientProfileScreen({ navigation, route }: any) {
     // ==================== STATE MANAGEMENT ====================
 
-    const { user: storedUser, setUser } = useFeedback();
+    const { user: storedUser, setUser } = useAuth();
+    const { openFeedback } = useFeedback();
     
-    /** User data passed from LoginScreen */
-    const user = route.params?.user || storedUser;
+    /** Prefer complete route data, otherwise use the restored authenticated user. */
+    const routeUser = route.params?.user;
+    const user = routeUser?.userId && routeUser?.token && routeUser?.role
+        ? routeUser
+        : storedUser;
+    const hasValidSession = Boolean(user?.userId && user?.token && user?.role);
     
     /** List of appointments for the patient */
     const [appointments, setAppointments] = useState<any[]>([]);
@@ -83,18 +91,19 @@ export default function PatientProfileScreen({ navigation, route }: any) {
      * Uses patient ID from user data
      */
     useEffect(() => {
-        if (user?.userId) {
+        if (hasValidSession) {
             fetchAppointments();
         }
-    }, [user?.userId]);
+    }, [hasValidSession, user?.userId]);
 
     useEffect(() => {
-        if (!user) {
+        if (!hasValidSession) {
+            setUser(null);
             navigation.replace('LoginScreen');
         }
-    }, [navigation, user]);
+    }, [hasValidSession, navigation, setUser]);
 
-    if (!user) {
+    if (!hasValidSession) {
         return null;
     }
 
@@ -115,9 +124,6 @@ export default function PatientProfileScreen({ navigation, route }: any) {
             // Construct the full API URL
             const appointmentsUrl = `${API_BASE_URL}/api/patient-appointments?patientId=${user.userId}`;
             
-            console.log('Fetching from:', appointmentsUrl);
-            console.log('Auth token:', user.token?.substring(0, 10) + '...');
-
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000);
             
@@ -131,11 +137,7 @@ export default function PatientProfileScreen({ navigation, route }: any) {
             });
 
             clearTimeout(timeoutId);
-            console.log('Response status:', response.status);
-
             const result = await response.json();
-            console.log('Response:', result);
-
             if (response.ok && result.success) {
                 setAppointments(result.appointments || []);
             } else {
@@ -158,21 +160,13 @@ export default function PatientProfileScreen({ navigation, route }: any) {
         }
     };
 
-    const handleLogout = () => {
-        Alert.alert('Log out', 'Are you sure you want to log out?', [
-            { text: 'Cancel', style: 'cancel' },
-            {
-                text: 'Log out',
-                style: 'destructive',
-                onPress: async () => {
-                    navigation.reset({
-                        index: 0,
-                        routes: [{ name: 'LoginScreen' }],
-                    });
-                    await setUser(null);
-                },
-            },
-        ]);
+    const handleLogout = async () => {
+        if (!await confirmAction('Log out', 'Are you sure you want to log out?')) return;
+        await setUser(null);
+        navigation.reset({
+            index: 0,
+            routes: [{ name: 'LoginScreen' }],
+        });
     };
 
     // ==================== SUB-COMPONENTS ====================
@@ -303,15 +297,10 @@ export default function PatientProfileScreen({ navigation, route }: any) {
                             {/* Cancel Appointment Button */}
                             <TouchableOpacity
                                 style={[styles.actionButtonSmall, styles.actionButtonDanger]}
-                                onPress={() => {
-                                    Alert.alert(
-                                        'Cancel Appointment',
-                                        'Are you sure you want to cancel this appointment?',
-                                        [
-                                            { text: 'No', style: 'cancel' },
-                                            { text: 'Yes, Cancel', onPress: cancelAppointment, style: 'destructive' }
-                                        ]
-                                    );
+                                onPress={async () => {
+                                    if (await confirmAction('Cancel Appointment', 'Are you sure you want to cancel this appointment?')) {
+                                        await cancelAppointment();
+                                    }
                                 }}
                             >
                                 <Text style={styles.actionButtonTextSmall}>✕ Cancel</Text>
@@ -435,6 +424,20 @@ export default function PatientProfileScreen({ navigation, route }: any) {
                     onPress={() => navigation.navigate('BookAppointment', { user })}
                 >
                     <Text style={styles.navButtonText}>📅 Book New Appointment</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.navButton}
+                    onPress={() => openFeedback()}
+                >
+                    <Text style={styles.navButtonText}>✍️ Submit Feedback</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.navButton}
+                    onPress={() => navigation.navigate('ChangePassword')}
+                >
+                    <Text style={styles.navButtonText}>🔒 Change Password</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity

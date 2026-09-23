@@ -9,7 +9,6 @@
 
 import React, { useState } from 'react';
 import {
-    Alert,
     Platform,
     StyleSheet,
     Text,
@@ -18,6 +17,8 @@ import {
     View,
 } from 'react-native';
 import { useFeedback } from '../../context/FeedbackContext';
+import { useAuth } from '../../context/AuthContext';
+import { Alert } from '../../utils/appAlert';
 
 // ==================== CONSTANTS ====================
 
@@ -25,7 +26,8 @@ import { useFeedback } from '../../context/FeedbackContext';
 const API_PORT = 8080;
 
 /** Android emulator local IP address for backend connection */
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '192.168.0.106';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 
 /** iOS/Web localhost address */
 const LOCALHOST = 'http://localhost';
@@ -70,7 +72,7 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
     // ==================== HOOKS ====================
 
     /** Feedback context for global feedback modal management */
-    const { setUser } = useFeedback();
+    const { setUser } = useAuth();
 
     // ==================== STATE MANAGEMENT ====================
     
@@ -144,8 +146,15 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
             return;
         }
 
-        // Navigate to user profile screen with user data
-        navigation.replace('PatientProfile', { user });
+        // Route each role to its own authenticated entry point.
+        navigation.replace(
+            user.role === 'patient'
+                ? 'PatientProfile'
+                : user.role === 'doctor'
+                    ? 'DoctorDashboard'
+                    : 'AdminDashboard',
+            { user },
+        );
     };
 
     // ==================== SUB-COMPONENTS ====================

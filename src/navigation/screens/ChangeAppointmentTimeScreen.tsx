@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     ActivityIndicator,
-    Alert,
     Platform,
     ScrollView,
     StyleSheet,
@@ -11,9 +10,12 @@ import {
     View,
 } from 'react-native';
 import { useFeedback } from '../../context/FeedbackContext';
+import { useAuth } from '../../context/AuthContext';
+import { Alert } from '../../utils/appAlert';
 
 const API_PORT = 8080;
-const ANDROID_LOCAL_IP = '10.0.4.12';
+const ANDROID_LOCAL_IP = '192.168.0.106';
+// const ANDROID_LOCAL_IP = '10.0.4.12'; // kept for reference; currently disabled
 const LOCALHOST = 'http://localhost';
 
 const getApiBaseUrl = () => {
@@ -41,7 +43,7 @@ interface TimeSlot {
 }
 
 export default function ChangeAppointmentTimeScreen({ navigation, route }: any) {
-    const { user: storedUser } = useFeedback();
+    const { user: storedUser, isAuthLoading } = useAuth();
     const [appointment, setAppointment] = useState<any>(route.params?.appointment || null);
     const user = route.params?.user || storedUser;
     const userToken = user?.token || '';
@@ -52,6 +54,13 @@ export default function ChangeAppointmentTimeScreen({ navigation, route }: any) 
     const [selectedTime, setSelectedTime] = useState('');
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+
+    useEffect(() => {
+        if (isAuthLoading) return;
+        if (!storedUser?.token || !storedUser?.userId || storedUser.role !== 'patient') {
+            navigation.replace('LoginScreen');
+        }
+    }, [isAuthLoading, storedUser?.token, storedUser?.userId, storedUser?.role]);
 
     const returnToProfile = () => {
         if (navigation.canGoBack()) {
@@ -104,7 +113,6 @@ export default function ChangeAppointmentTimeScreen({ navigation, route }: any) 
                 `${API_BASE_URL}/api/time-slots?doctorId=${appointmentDoctorId}&date=${encodeURIComponent(appointmentDateToLoad)}&appointmentId=${appointmentIdToLoad}`
             );
             const result = await response.json();
-            console.log('Change appointment response:', response.status, result);
             if (!response.ok || !result.success) {
                 Alert.alert('Unable to load times', result.message || 'No time slots available.');
                 return;
