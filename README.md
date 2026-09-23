@@ -1,88 +1,126 @@
-# Starter Template with React Navigation
+# Hospital Appointment System
 
-This is a minimal starter template for React Native apps using Expo and React Navigation.
+An Expo/React Native application for patients, doctors, and
+administrators. The app supports patient registration and login,
+doctor availability, appointment booking and rescheduling,
+feedback, password changes, and administrator management of
+doctors and weekdays.
 
-It includes the following:
+## Project structure
 
-- Example [Native Stack](https://reactnavigation.org/docs/native-stack-navigator) with a nested [Bottom Tab](https://reactnavigation.org/docs/bottom-tab-navigator)
-- Web support with [React Native for Web](https://necolas.github.io/react-native-web/)
-- TypeScript support and configured for React Navigation
-- Automatic [deep link](https://reactnavigation.org/docs/deep-linking) and [URL handling configuration](https://reactnavigation.org/docs/configuring-links)
-- Theme support [based on system appearance](https://reactnavigation.org/docs/themes/#using-the-operating-system-preferences)
-- Expo [Development Build](https://docs.expo.dev/develop/development-builds/introduction/) with [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)
+- `src/` — Expo and React Native frontend
+- `../backend/src/` — plain Java HTTP API backed by Oracle
+- `Schema.txt` — fresh Oracle schema, indexes, and sample data
+- `DEBUGGING.md` — development troubleshooting checklist
 
-## Getting Started
+## Requirements
 
-1. Create a new project using this template:
+- Node.js and npm
+- JDK 17 or newer
+- Oracle Database
+- Oracle JDBC driver, such as `ojdbc11.jar`
 
-   ```sh
-   npx create-expo-app@latest --template react-navigation/template
-   ```
+## Database setup
 
-2. Edit the `app.json` file to configure the `name`, `slug`, `scheme` and bundle identifiers (`ios.bundleIdentifier` and `android.bundleIdentifier`) for your app.
+For a fresh database, run [`Schema.txt`](./Schema.txt) in SQL*Plus or Oracle SQL Developer.
+It creates the tables, doctor weekday availability, the unique active appointment-slot index, and sample accounts/data.
 
-3. Edit the `src/App.tsx` file to start working on your app.
+Fresh-schema sample accounts:
 
-## Running the app
+| Role    | Login ID            | Password     |
+| ------- | ------------------- | ------------ |
+| Admin   | `Super Admin`       | `admin123`   |
+| Doctor  |         `84`        | `doc123`     |
+| Patient | `amina@example.com` | `patient123` |
 
-- Install the dependencies:
+These credentials are for local development only. Change them before deployment. New passwords are stored as PBKDF2 hashes; old sample passwords are upgraded after their first successful login.
 
-  ```sh
-  npm install
-  ```
+## Current rebuilt database test accounts
 
-- Start the development server:
+These are the 12 test users currently available in the rebuilt database.
 
-  ```sh
-  npm start
-  ```
+| Role    | User         | Login credential | Password     |
+| ------- | ------------ | ---------------- | ------------ |
+| Admin   | Super Admin  | `Super Admin`    | `admin123`   |
+| Admin   | System Admin | `System Admin`   | `admin456`   |
+| Doctor  | Dr. Rahman   |      `84`        | `doc123`     |
+| Doctor  | Dr. Ayesha Khan |   `85`        | `doc123`     |
+| Doctor  | Dr. Karim    |      `86`        | `doc123`     |
+| Doctor  | Dr. Nusrat   |      `87`        | `doc123`     |
+| Doctor  | Dr. Hasan    |      `88`        | `doc123`     |
+| Patient | Amina Rahman | `amina@pms.com`  | `patient123` |
+| Patient | Tanvir Ahmed | `tanvir@pms.com` | `patient123` |
+| Patient | Nadia Islam  | `nadia@pms.com`  | `patient123` |
+| Patient | Fahim Hasan  | `fahim@pms.com`  | `patient123` |
+| Patient | Sadia Akter  | `sadia@pms.com`  | `patient123` |
 
-- Build and run iOS and Android development builds:
+These credentials are for development and testing only. Do not use them in production.
 
-  ```sh
-  npm run ios
-  # or
-  npm run android
-  ```
+If an existing database was created from an older schema, add the doctor fees column before starting the API:
 
-- In the terminal running the development server, press `i` to open the iOS simulator, `a` to open the Android device or emulator, or `w` to open the web browser.
-
-### Web
-
-Start the browser version with:
-
-```sh
-npm run web
+```sql
+ALTER TABLE doctors ADD fees NUMBER(8,2);
 ```
 
-Create a production web export with:
+Existing duplicate `BOOKED` appointments must be resolved before creating `uq_active_doctor_slot`. Keep the original appointment and mark extra rows as `CANCELLED`.
 
-```sh
-npm run web:build
-```
+## Start the backend
 
-The web app uses `http://localhost:8080` for the Java API by default. When the API is hosted at another URL, set `EXPO_PUBLIC_API_BASE_URL` before starting Expo, for example:
+From the `backend` directory, set the Oracle connection variables and compile the Java sources:
 
 ```powershell
-$env:EXPO_PUBLIC_API_BASE_URL = "http://192.168.0.106:8080"
-npm run web
+$env:ORACLE_URL = 'jdbc:oracle:thin:@localhost:1521:xe'
+$env:ORACLE_USERNAME = 'c##idp1_1'
+$env:ORACLE_PASSWORD = 'your-database-password'
+$jdbcJar = 'C:\path\to\ojdbc11.jar'
+
+New-Item -ItemType Directory -Force out
+javac --add-modules jdk.httpserver -cp $jdbcJar -d out src\*.java
+java --add-modules jdk.httpserver -cp "out;$jdbcJar" ApiServer
 ```
 
-The Java API must be running and reachable from the browser. Its CORS configuration already allows web requests.
+The API runs on port `8080`. Check the API and Oracle connection with:
 
-## Notes
+```powershell
+curl.exe -i http://localhost:8080/api/health
+```
 
-This project uses a [development build](https://docs.expo.dev/develop/development-builds/introduction/) and cannot be run with [Expo Go](https://expo.dev/go). To run the app with Expo Go, edit the `package.json` file, remove the `expo-dev-client` package and `--dev-client` flag from the `start` script.
+## Start the frontend
 
-We highly recommend using the development builds for normal development and testing.
+From `MY-APP`:
 
-The `ios` and `android` folder are gitignored in the project by default as they are automatically generated during the build process ([Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)). This means that you should not edit these folders directly and use [config plugins](https://docs.expo.dev/config-plugins/) instead. However, if you need to edit these folders, you can remove them from the `.gitignore` file so that they are tracked by git.
+```powershell
+npm install
+npm start
+```
 
-## Resources
+The frontend uses `http://localhost:8080` by default on web and
+the configured Android LAN address on Android.
+For a physical device or VS Code Dev Tunnel, set the important
+environment variable before starting Expo:
 
-- [React Navigation documentation](https://reactnavigation.org/)
-- [Expo documentation](https://docs.expo.dev/)
+```powershell
+$env:EXPO_PUBLIC_API_BASE_URL = 'https://your-dev-tunnel-url/'
+npm start
+```
 
----
+The same variable may be stored in the local `.env` file.
+Do not commit private credentials or temporary tunnel values.
 
-Demo assets are from [lucide.dev](https://lucide.dev/)
+Useful commands:
+
+```powershell
+npm run web
+npx.cmd tsc --noEmit
+npx.cmd expo export --platform web
+```
+
+## Main behavior
+
+- Sessions expire after eight hours and can be revoked with logout.
+- Doctor add/edit forms manage working hours, fees, and weekdays.
+- Weekdays use JavaScript mapping: `0 = Sunday` through `6 = Saturday`.
+- The backend validates doctor schedules and appointment slots independently of the UI.
+- Oracle prevents two active bookings for the same doctor, date, and time.
+
+For troubleshooting, see [`DEBUGGING.md`](./DEBUGGING.md).
