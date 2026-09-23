@@ -4,7 +4,19 @@
   "graph": {},
   "nodes": [
     {
-      "id": "src_navigation_screens_admindashboardscreen_doctor",
+      "id": "src_context_authcontext_authcontexttype",
+      "label": "AuthContextType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "authcontexttype",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_navigation_screens_admindoctorsscreen_doctor",
       "label": "Doctor",
       "_callable": true,
       "_callable_class": true,
@@ -12,32 +24,32 @@
       "community": 0,
       "file_type": "code",
       "norm_label": "doctor",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
-      "source_location": "L23"
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "src_navigation_screens_admindashboardscreen_summary",
-      "label": "Summary",
+      "id": "src_utils_appalert_alertbutton",
+      "label": "AlertButton",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "summary",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
-      "source_location": "L24"
+      "norm_label": "alertbutton",
+      "source_file": "src/utils/appAlert.ts",
+      "source_location": "L3"
     },
     {
-      "id": "src_navigation_screens_doctordashboardscreen_doctorappointment",
-      "label": "DoctorAppointment",
+      "id": "src_navigation_screens_admindoctorformscreen_doctorform",
+      "label": "DoctorForm",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "file_type": "code",
-      "norm_label": "doctorappointment",
-      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
-      "source_location": "L22"
+      "norm_label": "doctorform",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_navigation_screens_homescreen_doctor",
@@ -45,7 +57,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "file_type": "code",
       "norm_label": "doctor",
       "source_file": "src/navigation/screens/HomeScreen.tsx",
@@ -57,35 +69,11 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "file_type": "code",
       "norm_label": "heroslide",
       "source_file": "src/navigation/screens/HomeScreen.tsx",
       "source_location": "L61"
-    },
-    {
-      "id": "src_navigation_screens_admindoctorsscreen_doctor",
-      "label": "Doctor",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "doctor",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_utils_appalert_alertbutton",
-      "label": "AlertButton",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "alertbutton",
-      "source_file": "src/utils/appAlert.ts",
-      "source_location": "L3"
     },
     {
       "id": "src_context_feedbackcontext_feedbackcontexttype",
@@ -93,35 +81,47 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackcontexttype",
       "source_file": "src/context/FeedbackContext.tsx",
       "source_location": "L16"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen_doctor",
+      "id": "src_navigation_screens_admindashboardscreen_doctor",
       "label": "Doctor",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "doctor",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L47"
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "source_location": "L23"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen_timeslot",
-      "label": "TimeSlot",
+      "id": "src_navigation_screens_admindashboardscreen_summary",
+      "label": "Summary",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
-      "norm_label": "timeslot",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L55"
+      "norm_label": "summary",
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "src_navigation_screens_doctordashboardscreen_doctorappointment",
+      "label": "DoctorAppointment",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "doctorappointment",
+      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
+      "source_location": "L22"
     },
     {
       "id": "android_app_src_main_java_com_myapp_mainapplication_mainapplication",
@@ -136,36 +136,12 @@
       "source_location": "L17"
     },
     {
-      "id": "src_context_authcontext_authcontexttype",
-      "label": "AuthContextType",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "authcontexttype",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_timeslot",
-      "label": "TimeSlot",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "timeslot",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L41"
-    },
-    {
       "id": "android_app_src_main_java_com_myapp_mainactivity_mainactivity",
       "label": "MainActivity",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "mainactivity",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
@@ -177,55 +153,135 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "defaultreactactivitydelegate",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
       "source_location": "L40"
     },
     {
-      "id": "src_navigation_index_backbutton",
-      "label": "BackButton()",
+      "id": "src_navigation_screens_changeappointmenttimescreen_timeslot",
+      "label": "TimeSlot",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "file_type": "code",
-      "norm_label": "backbutton()",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L172"
+      "norm_label": "timeslot",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L41"
     },
     {
-      "id": "src_navigation_screens_aboutscreen_aboutscreen",
-      "label": "AboutScreen()",
+      "id": "src_navigation_screens_bookappointmentscreen_doctor",
+      "label": "Doctor",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 9,
       "file_type": "code",
-      "norm_label": "aboutscreen()",
-      "source_file": "src/navigation/screens/AboutScreen.js",
-      "source_location": "L5"
+      "norm_label": "doctor",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L47"
     },
     {
-      "id": "src_navigation_screens_admindashboardscreen_admindashboardscreen",
-      "label": "AdminDashboardScreen()",
+      "id": "src_navigation_screens_bookappointmentscreen_timeslot",
+      "label": "TimeSlot",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 9,
       "file_type": "code",
-      "norm_label": "admindashboardscreen()",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
-      "source_location": "L26"
+      "norm_label": "timeslot",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L55"
     },
     {
-      "id": "src_navigation_screens_admindashboardscreen_datasection",
-      "label": "DataSection()",
+      "id": "src_context_authcontext_authprovider",
+      "label": "AuthProvider()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "datasection()",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
-      "source_location": "L180"
+      "norm_label": "authprovider()",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_context_authcontext_getwebuser",
+      "label": "getWebUser()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "getwebuser()",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_context_authcontext_parseuser",
+      "label": "parseUser()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "parseuser()",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_context_authcontext_useauth",
+      "label": "useAuth()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "useauth()",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L96"
+    },
+    {
+      "id": "src_navigation_screens_adminaddadminscreen_adminaddadminscreen",
+      "label": "AdminAddAdminScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "adminaddadminscreen()",
+      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
+      "label": "AdminDoctorsScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "admindoctorsscreen()",
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_navigation_screens_adminoverviewscreen_adminoverviewscreen",
+      "label": "AdminOverviewScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "adminoverviewscreen()",
+      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_navigation_screens_adminrecordsscreen_adminrecordsscreen",
+      "label": "AdminRecordsScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "adminrecordsscreen()",
+      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
+      "source_location": "L8"
     },
     {
       "id": "src_navigation_screens_changepasswordscreen_changepasswordscreen",
@@ -239,59 +295,26 @@
       "source_location": "L22"
     },
     {
-      "id": "src_navigation_screens_doctordashboardscreen_doctordashboardscreen",
-      "label": "DoctorDashboardScreen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "doctordashboardscreen()",
-      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_navigation_screens_homescreen_getapibaseurl",
+      "id": "src_navigation_screens_loginscreen_getapibaseurl",
       "label": "getApiBaseUrl()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "getapibaseurl()",
-      "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L40"
+      "source_file": "src/navigation/screens/LoginScreen.tsx",
+      "source_location": "L46"
     },
     {
-      "id": "src_navigation_screens_homescreen_homescreen",
-      "label": "HomeScreen()",
+      "id": "src_navigation_screens_loginscreen_loginscreen",
+      "label": "LoginScreen()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "homescreen()",
-      "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L70"
-    },
-    {
-      "id": "src_navigation_screens_patientprofile_getapibaseurl",
-      "label": "getApiBaseUrl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "getapibaseurl()",
-      "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L42"
-    },
-    {
-      "id": "src_navigation_screens_patientprofile_patientprofilescreen",
-      "label": "PatientProfileScreen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "patientprofilescreen()",
-      "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L65"
+      "norm_label": "loginscreen()",
+      "source_file": "src/navigation/screens/LoginScreen.tsx",
+      "source_location": "L71"
     },
     {
       "id": "src_navigation_screens_patientregistrationscreen_patientregistrationscreen",
@@ -305,15 +328,15 @@
       "source_location": "L20"
     },
     {
-      "id": "src_utils_confirmaction_confirmaction",
-      "label": "confirmAction()",
+      "id": "src_utils_adminapi_adminrequest",
+      "label": "adminRequest()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "confirmaction()",
-      "source_file": "src/utils/confirmAction.ts",
-      "source_location": "L3"
+      "norm_label": "adminrequest()",
+      "source_file": "src/utils/adminApi.ts",
+      "source_location": "L5"
     },
     {
       "id": "src_app_app",
@@ -335,18 +358,18 @@
       "file_type": "code",
       "norm_label": "navigation()",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L209"
+      "source_location": "L211"
     },
     {
-      "id": "src_context_authcontext_useauth",
-      "label": "useAuth()",
+      "id": "src_navigation_index_backbutton",
+      "label": "BackButton()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "useauth()",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L83"
+      "norm_label": "backbutton()",
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L174"
     },
     {
       "id": "src_navigation_index_menudropdown",
@@ -357,91 +380,91 @@
       "file_type": "code",
       "norm_label": "menudropdown()",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L79"
+      "source_location": "L81"
     },
     {
-      "id": "src_navigation_screens_adminaddadminscreen_adminaddadminscreen",
-      "label": "AdminAddAdminScreen()",
+      "id": "src_navigation_screens_aboutscreen_aboutscreen",
+      "label": "AboutScreen()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "adminaddadminscreen()",
-      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
-      "source_location": "L7"
+      "norm_label": "aboutscreen()",
+      "source_file": "src/navigation/screens/AboutScreen.js",
+      "source_location": "L5"
     },
     {
-      "id": "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
-      "label": "AdminDoctorsScreen()",
+      "id": "src_navigation_screens_adminadddoctorscreen_adminadddoctorscreen",
+      "label": "AdminAddDoctorScreen()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "admindoctorsscreen()",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L10"
+      "norm_label": "adminadddoctorscreen()",
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L4"
     },
     {
-      "id": "src_navigation_screens_adminoverviewscreen_adminoverviewscreen",
-      "label": "AdminOverviewScreen()",
+      "id": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "label": "AdminDoctorFormScreen()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "adminoverviewscreen()",
-      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
-      "source_location": "L7"
+      "norm_label": "admindoctorformscreen()",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L48"
     },
     {
-      "id": "src_navigation_screens_adminrecordsscreen_adminrecordsscreen",
-      "label": "AdminRecordsScreen()",
+      "id": "src_navigation_screens_admindoctorformscreen_formfromdoctor",
+      "label": "formFromDoctor()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "adminrecordsscreen()",
-      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
-      "source_location": "L8"
+      "norm_label": "formfromdoctor()",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L35"
     },
     {
-      "id": "src_navigation_screens_loginscreen_getapibaseurl",
+      "id": "src_navigation_screens_admineditdoctorscreen_admineditdoctorscreen",
+      "label": "AdminEditDoctorScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "admineditdoctorscreen()",
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_navigation_screens_homescreen_getapibaseurl",
       "label": "getApiBaseUrl()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "getapibaseurl()",
-      "source_file": "src/navigation/screens/LoginScreen.tsx",
-      "source_location": "L46"
+      "source_file": "src/navigation/screens/HomeScreen.tsx",
+      "source_location": "L40"
     },
     {
-      "id": "src_navigation_screens_loginscreen_loginscreen",
-      "label": "LoginScreen()",
+      "id": "src_navigation_screens_homescreen_homescreen",
+      "label": "HomeScreen()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "loginscreen()",
-      "source_file": "src/navigation/screens/LoginScreen.tsx",
-      "source_location": "L71"
-    },
-    {
-      "id": "src_utils_adminapi_adminrequest",
-      "label": "adminRequest()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "adminrequest()",
-      "source_file": "src/utils/adminApi.ts",
-      "source_location": "L10"
+      "norm_label": "homescreen()",
+      "source_file": "src/navigation/screens/HomeScreen.tsx",
+      "source_location": "L70"
     },
     {
       "id": "src_components_feedbackmodal_feedbackmodal",
       "label": "FeedbackModal()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackmodal()",
       "source_file": "src/components/FeedbackModal.tsx",
@@ -452,7 +475,7 @@
       "label": "getApiBaseUrl()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "getapibaseurl()",
       "source_file": "src/components/FeedbackModal.tsx",
@@ -463,7 +486,7 @@
       "label": "FeedbackProvider()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackprovider()",
       "source_file": "src/context/FeedbackContext.tsx",
@@ -474,33 +497,77 @@
       "label": "useFeedback()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "usefeedback()",
       "source_file": "src/context/FeedbackContext.tsx",
       "source_location": "L83"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen_bookappointmentscreen",
-      "label": "BookAppointmentScreen()",
+      "id": "src_navigation_screens_admindashboardscreen_admindashboardscreen",
+      "label": "AdminDashboardScreen()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
-      "norm_label": "bookappointmentscreen()",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L61"
+      "norm_label": "admindashboardscreen()",
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "source_location": "L26"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen_getapibaseurl",
+      "id": "src_navigation_screens_admindashboardscreen_datasection",
+      "label": "DataSection()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "datasection()",
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "source_location": "L180"
+    },
+    {
+      "id": "src_navigation_screens_doctordashboardscreen_doctordashboardscreen",
+      "label": "DoctorDashboardScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "doctordashboardscreen()",
+      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "src_navigation_screens_patientprofile_getapibaseurl",
       "label": "getApiBaseUrl()",
       "_callable": true,
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "getapibaseurl()",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L36"
+      "source_file": "src/navigation/screens/PatientProfile.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_navigation_screens_patientprofile_patientprofilescreen",
+      "label": "PatientProfileScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "patientprofilescreen()",
+      "source_file": "src/navigation/screens/PatientProfile.tsx",
+      "source_location": "L65"
+    },
+    {
+      "id": "src_utils_confirmaction_confirmaction",
+      "label": "confirmAction()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "confirmaction()",
+      "source_file": "src/utils/confirmAction.ts",
+      "source_location": "L3"
     },
     {
       "id": "android_app_src_main_java_com_myapp_mainapplication_mainapplication_onconfigurationchanged",
@@ -525,88 +592,11 @@
       "source_location": "L30"
     },
     {
-      "id": "src_context_authcontext_authprovider",
-      "label": "AuthProvider()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "authprovider()",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_context_authcontext_getwebuser",
-      "label": "getWebUser()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "getwebuser()",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L22"
-    },
-    {
-      "id": "src_context_authcontext_parseuser",
-      "label": "parseUser()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "parseuser()",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_changeappointmenttimescreen",
-      "label": "ChangeAppointmentTimeScreen()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "changeappointmenttimescreen()",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_getapibaseurl",
-      "label": "getApiBaseUrl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "getapibaseurl()",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_normalizeappointmentdate",
-      "label": "normalizeAppointmentDate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "normalizeappointmentdate()",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L31"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_normalizetime",
-      "label": "normalizeTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "normalizetime()",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L36"
-    },
-    {
       "id": "android_app_src_main_java_com_myapp_mainactivity_mainactivity_createreactactivitydelegate",
       "label": ".createReactActivityDelegate()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": ".createreactactivitydelegate()",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
@@ -617,7 +607,7 @@
       "label": ".getMainComponentName()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": ".getmaincomponentname()",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
@@ -628,7 +618,7 @@
       "label": ".invokeDefaultOnBackPressed()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": ".invokedefaultonbackpressed()",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
@@ -639,91 +629,187 @@
       "label": ".onCreate()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": ".oncreate()",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
       "source_location": "L15"
     },
     {
-      "id": "src_navigation_index",
-      "label": "navigation/index.tsx",
+      "id": "src_navigation_screens_changeappointmenttimescreen_changeappointmenttimescreen",
+      "label": "ChangeAppointmentTimeScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "changeappointmenttimescreen()",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_navigation_screens_changeappointmenttimescreen_getapibaseurl",
+      "label": "getApiBaseUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "getapibaseurl()",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_navigation_screens_changeappointmenttimescreen_normalizeappointmentdate",
+      "label": "normalizeAppointmentDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "normalizeappointmentdate()",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_navigation_screens_changeappointmenttimescreen_normalizetime",
+      "label": "normalizeTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "normalizetime()",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_navigation_screens_bookappointmentscreen_bookappointmentscreen",
+      "label": "BookAppointmentScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "bookappointmentscreen()",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L61"
+    },
+    {
+      "id": "src_navigation_screens_bookappointmentscreen_getapibaseurl",
+      "label": "getApiBaseUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "getapibaseurl()",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_context_authcontext",
+      "label": "AuthContext.tsx",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "navigation/index.tsx",
-      "source_file": "src/navigation/index.tsx",
+      "norm_label": "authcontext.tsx",
+      "source_file": "src/context/AuthContext.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_index_menuitems",
-      "label": "menuItems",
+      "id": "src_context_authcontext_authcontext",
+      "label": "AuthContext",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "menuitems",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L52"
+      "norm_label": "authcontext",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L20"
     },
     {
-      "id": "src_navigation_index_stack",
-      "label": "Stack",
+      "id": "src_navigation_screens_adminaddadminscreen",
+      "label": "AdminAddAdminScreen.tsx",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "stack",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L46"
+      "norm_label": "adminaddadminscreen.tsx",
+      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "src_navigation_index_styles",
+      "id": "src_navigation_screens_adminaddadminscreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L346"
+      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
+      "source_location": "L27"
     },
     {
-      "id": "src_navigation_screens_aboutscreen",
-      "label": "AboutScreen.js",
+      "id": "src_navigation_screens_admindoctorsscreen",
+      "label": "AdminDoctorsScreen.tsx",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "aboutscreen.js",
-      "source_file": "src/navigation/screens/AboutScreen.js",
+      "norm_label": "admindoctorsscreen.tsx",
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_aboutscreen_styles",
+      "id": "src_navigation_screens_admindoctorsscreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/AboutScreen.js",
-      "source_location": "L24"
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_location": "L86"
     },
     {
-      "id": "src_navigation_screens_admindashboardscreen",
-      "label": "AdminDashboardScreen.tsx",
+      "id": "src_navigation_screens_adminoverviewscreen",
+      "label": "AdminOverviewScreen.tsx",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "admindashboardscreen.tsx",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "norm_label": "adminoverviewscreen.tsx",
+      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_admindashboardscreen_styles",
+      "id": "src_navigation_screens_adminoverviewscreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
-      "source_location": "L182"
+      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_navigation_screens_adminrecordsscreen",
+      "label": "AdminRecordsScreen.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "adminrecordsscreen.tsx",
+      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_navigation_screens_adminrecordsscreen_config",
+      "label": "config",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "config",
+      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_navigation_screens_adminrecordsscreen_styles",
+      "label": "styles",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
+      "source_location": "L27"
     },
     {
       "id": "src_navigation_screens_changepasswordscreen",
@@ -746,84 +832,34 @@
       "source_location": "L100"
     },
     {
-      "id": "src_navigation_screens_doctordashboardscreen",
-      "label": "DoctorDashboardScreen.tsx",
+      "id": "src_navigation_screens_loginscreen",
+      "label": "LoginScreen.tsx",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "doctordashboardscreen.tsx",
-      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
+      "norm_label": "loginscreen.tsx",
+      "source_file": "src/navigation/screens/LoginScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_doctordashboardscreen_styles",
-      "label": "styles",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "styles",
-      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
-      "source_location": "L155"
-    },
-    {
-      "id": "src_navigation_screens_homescreen",
-      "label": "HomeScreen.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "homescreen.tsx",
-      "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_navigation_screens_homescreen_api_base_url",
+      "id": "src_navigation_screens_loginscreen_api_base_url",
       "label": "API_BASE_URL",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "api_base_url",
-      "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L47"
+      "source_file": "src/navigation/screens/LoginScreen.tsx",
+      "source_location": "L62"
     },
     {
-      "id": "src_navigation_screens_homescreen_styles",
+      "id": "src_navigation_screens_loginscreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L418"
-    },
-    {
-      "id": "src_navigation_screens_patientprofile",
-      "label": "PatientProfile.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "patientprofile.tsx",
-      "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_navigation_screens_patientprofile_api_base_url",
-      "label": "API_BASE_URL",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "api_base_url",
-      "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_navigation_screens_patientprofile_styles",
-      "label": "styles",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "styles",
-      "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L476"
+      "source_file": "src/navigation/screens/LoginScreen.tsx",
+      "source_location": "L257"
     },
     {
       "id": "src_navigation_screens_patientregistrationscreen",
@@ -843,27 +879,57 @@
       "file_type": "code",
       "norm_label": "styles",
       "source_file": "src/navigation/screens/PatientRegistrationScreen.tsx",
-      "source_location": "L159"
+      "source_location": "L174"
     },
     {
-      "id": "src_utils_confirmaction",
-      "label": "confirmAction.ts",
+      "id": "src_utils_adminapi",
+      "label": "adminApi.ts",
       "_origin": "ast",
       "community": 0,
       "file_type": "code",
-      "norm_label": "confirmaction.ts",
-      "source_file": "src/utils/confirmAction.ts",
+      "norm_label": "adminapi.ts",
+      "source_file": "src/utils/adminApi.ts",
       "source_location": "L1"
     },
     {
-      "id": "ref_react",
-      "label": "react",
+      "id": "src_utils_apiconfig",
+      "label": "apiConfig.ts",
       "_origin": "ast",
       "community": 0,
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L26"
+      "file_type": "code",
+      "norm_label": "apiconfig.ts",
+      "source_file": "src/utils/apiConfig.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_utils_apiconfig_api_base_url",
+      "label": "API_BASE_URL",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "api_base_url",
+      "source_file": "src/utils/apiConfig.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_utils_appalert",
+      "label": "appAlert.ts",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "appalert.ts",
+      "source_file": "src/utils/appAlert.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_utils_appalert_alert",
+      "label": "Alert",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "alert",
+      "source_file": "src/utils/appAlert.ts",
+      "source_location": "L8"
     },
     {
       "id": "ref_react_native",
@@ -1186,10 +1252,70 @@
       "source_location": "L37"
     },
     {
+      "id": "package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "package_scripts_android",
+      "label": "android",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "android",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_scripts_ios",
+      "label": "ios",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "ios",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_scripts_start",
+      "label": "start",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "start",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "package_scripts_web",
+      "label": "web",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "web",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "package_scripts_web_build",
+      "label": "web:build",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "web:build",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
       "id": "tsconfig",
       "label": "tsconfig.json",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "code",
       "norm_label": "tsconfig.json",
       "source_file": "tsconfig.json",
@@ -1199,7 +1325,7 @@
       "id": "tsconfig_compileroptions",
       "label": "compilerOptions",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "code",
       "norm_label": "compileroptions",
       "source_file": "tsconfig.json",
@@ -1209,7 +1335,7 @@
       "id": "tsconfig_compileroptions_moduleresolution",
       "label": "moduleResolution",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "code",
       "norm_label": "moduleresolution",
       "source_file": "tsconfig.json",
@@ -1219,7 +1345,7 @@
       "id": "tsconfig_compileroptions_strict",
       "label": "strict",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "code",
       "norm_label": "strict",
       "source_file": "tsconfig.json",
@@ -1229,7 +1355,7 @@
       "id": "tsconfig_extends",
       "label": "extends",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "code",
       "norm_label": "extends",
       "source_file": "tsconfig.json",
@@ -1239,7 +1365,7 @@
       "id": "ref_expo_tsconfig_base",
       "label": "expo/tsconfig.base",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "file_type": "concept",
       "norm_label": "expo/tsconfig.base",
       "source_file": "tsconfig.json",
@@ -1249,7 +1375,7 @@
       "id": "android_gradlew",
       "label": "gradlew",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -1263,7 +1389,7 @@
       "id": "android_gradlew__entry",
       "label": "gradlew script",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -1277,7 +1403,7 @@
       "id": "android_gradlew_die",
       "label": "die()",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -1291,7 +1417,7 @@
       "id": "android_gradlew_warn",
       "label": "warn()",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "file_type": "code",
       "metadata": {
         "language": "bash",
@@ -1302,20 +1428,10 @@
       "source_location": "L94"
     },
     {
-      "id": "react_native",
-      "label": "react-native",
-      "_origin": "ast",
-      "community": 12,
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "react-native",
-      "source_file": "react-native"
-    },
-    {
       "id": "src_types_d",
       "label": "types.d.ts",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "file_type": "code",
       "norm_label": "types.d.ts",
       "source_file": "src/types.d.ts",
@@ -1325,7 +1441,7 @@
       "id": "src_types_d_jpg",
       "label": "*.jpg",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "file_type": "code",
       "norm_label": "*.jpg",
       "source_file": "src/types.d.ts",
@@ -1335,7 +1451,7 @@
       "id": "src_types_d_png",
       "label": "*.png",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "file_type": "code",
       "norm_label": "*.png",
       "source_file": "src/types.d.ts",
@@ -1345,7 +1461,7 @@
       "id": "android_app_build",
       "label": "app/build.gradle",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "file_type": "code",
       "norm_label": "app/build.gradle",
       "source_file": "android/app/build.gradle",
@@ -1355,7 +1471,7 @@
       "id": "android_build",
       "label": "android/build.gradle",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "file_type": "code",
       "norm_label": "android/build.gradle",
       "source_file": "android/build.gradle",
@@ -1365,627 +1481,177 @@
       "id": "android_settings",
       "label": "settings.gradle",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "file_type": "code",
       "norm_label": "settings.gradle",
       "source_file": "android/settings.gradle",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_adminaddadminscreen",
-      "label": "AdminAddAdminScreen.tsx",
+      "id": "src_navigation_index",
+      "label": "navigation/index.tsx",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "adminaddadminscreen.tsx",
-      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
+      "norm_label": "navigation/index.tsx",
+      "source_file": "src/navigation/index.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_adminaddadminscreen_styles",
+      "id": "src_navigation_index_menuitems",
+      "label": "menuItems",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "menuitems",
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_navigation_index_stack",
+      "label": "Stack",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "stack",
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_navigation_index_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
-      "source_location": "L27"
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L350"
     },
     {
-      "id": "src_navigation_screens_admindoctorsscreen",
-      "label": "AdminDoctorsScreen.tsx",
+      "id": "src_navigation_screens_aboutscreen",
+      "label": "AboutScreen.js",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "admindoctorsscreen.tsx",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "norm_label": "aboutscreen.js",
+      "source_file": "src/navigation/screens/AboutScreen.js",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_admindoctorsscreen_emptyform",
+      "id": "src_navigation_screens_aboutscreen_styles",
+      "label": "styles",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/AboutScreen.js",
+      "source_location": "L24"
+    },
+    {
+      "id": "src_navigation_screens_adminadddoctorscreen",
+      "label": "AdminAddDoctorScreen.tsx",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "adminadddoctorscreen.tsx",
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_navigation_screens_admindoctorformscreen",
+      "label": "AdminDoctorFormScreen.tsx",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "admindoctorformscreen.tsx",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_navigation_screens_admindoctorformscreen_emptyform",
       "label": "emptyForm",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "emptyform",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L8"
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L30"
     },
     {
-      "id": "src_navigation_screens_admindoctorsscreen_styles",
+      "id": "src_navigation_screens_admindoctorformscreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L69"
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L168"
     },
     {
-      "id": "src_navigation_screens_adminoverviewscreen",
-      "label": "AdminOverviewScreen.tsx",
+      "id": "src_navigation_screens_admindoctorformscreen_weekdays",
+      "label": "weekdays",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "adminoverviewscreen.tsx",
-      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
+      "norm_label": "weekdays",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_navigation_screens_admineditdoctorscreen",
+      "label": "AdminEditDoctorScreen.tsx",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "admineditdoctorscreen.tsx",
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_adminoverviewscreen_styles",
-      "label": "styles",
+      "id": "src_navigation_screens_homescreen",
+      "label": "HomeScreen.tsx",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
-      "norm_label": "styles",
-      "source_file": "src/navigation/screens/AdminOverviewScreen.tsx",
-      "source_location": "L22"
-    },
-    {
-      "id": "src_navigation_screens_adminrecordsscreen",
-      "label": "AdminRecordsScreen.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "adminrecordsscreen.tsx",
-      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
+      "norm_label": "homescreen.tsx",
+      "source_file": "src/navigation/screens/HomeScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_adminrecordsscreen_config",
-      "label": "config",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "config",
-      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_navigation_screens_adminrecordsscreen_styles",
-      "label": "styles",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "styles",
-      "source_file": "src/navigation/screens/AdminRecordsScreen.tsx",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_navigation_screens_loginscreen",
-      "label": "LoginScreen.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "loginscreen.tsx",
-      "source_file": "src/navigation/screens/LoginScreen.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_navigation_screens_loginscreen_api_base_url",
+      "id": "src_navigation_screens_homescreen_api_base_url",
       "label": "API_BASE_URL",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "api_base_url",
-      "source_file": "src/navigation/screens/LoginScreen.tsx",
-      "source_location": "L62"
+      "source_file": "src/navigation/screens/HomeScreen.tsx",
+      "source_location": "L47"
     },
     {
-      "id": "src_navigation_screens_loginscreen_styles",
+      "id": "src_navigation_screens_homescreen_styles",
       "label": "styles",
       "_origin": "ast",
       "community": 2,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/LoginScreen.tsx",
-      "source_location": "L257"
+      "source_file": "src/navigation/screens/HomeScreen.tsx",
+      "source_location": "L415"
     },
     {
-      "id": "src_utils_adminapi",
-      "label": "adminApi.ts",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "adminapi.ts",
-      "source_file": "src/utils/adminApi.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_utils_adminapi_api_base_url",
-      "label": "API_BASE_URL",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "api_base_url",
-      "source_file": "src/utils/adminApi.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_utils_appalert",
-      "label": "appAlert.ts",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "appalert.ts",
-      "source_file": "src/utils/appAlert.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_utils_appalert_alert",
-      "label": "Alert",
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "alert",
-      "source_file": "src/utils/appAlert.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "app",
-      "label": "app.json",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "app.json",
-      "source_file": "app.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_adaptiveicon_backgroundcolor",
-      "label": "backgroundColor",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "backgroundcolor",
-      "source_file": "app.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "app_adaptiveicon_foregroundimage",
-      "label": "foregroundImage",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "foregroundimage",
-      "source_file": "app.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "app_android_adaptiveicon",
-      "label": "adaptiveIcon",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "adaptiveicon",
-      "source_file": "app.json",
-      "source_location": "L16"
-    },
-    {
-      "id": "app_android_package",
-      "label": "package",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "package",
-      "source_file": "app.json",
-      "source_location": "L20"
-    },
-    {
-      "id": "app_expo",
-      "label": "expo",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "expo",
-      "source_file": "app.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "app_expo_android",
-      "label": "android",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "android",
-      "source_file": "app.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "app_expo_icon",
-      "label": "icon",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "icon",
-      "source_file": "app.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_expo_ios",
-      "label": "ios",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "ios",
-      "source_file": "app.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "app_expo_name",
-      "label": "name",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "name",
-      "source_file": "app.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "app_expo_newarchenabled",
-      "label": "newArchEnabled",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "newarchenabled",
-      "source_file": "app.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_expo_orientation",
-      "label": "orientation",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "orientation",
-      "source_file": "app.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_expo_plugins",
-      "label": "plugins",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "plugins",
-      "source_file": "app.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "app_expo_scheme",
-      "label": "scheme",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "scheme",
-      "source_file": "app.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_expo_slug",
-      "label": "slug",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "slug",
-      "source_file": "app.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "app_expo_userinterfacestyle",
-      "label": "userInterfaceStyle",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "userinterfacestyle",
-      "source_file": "app.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_expo_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "app.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "app_expo_web",
-      "label": "web",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "web",
-      "source_file": "app.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "app_ios_bundleidentifier",
-      "label": "bundleIdentifier",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "bundleidentifier",
-      "source_file": "app.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "app_ios_supportstablet",
-      "label": "supportsTablet",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "supportstablet",
-      "source_file": "app.json",
-      "source_location": "L12"
-    },
-    {
-      "id": "app_web_bundler",
-      "label": "bundler",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "bundler",
-      "source_file": "app.json",
-      "source_location": "L24"
-    },
-    {
-      "id": "app_web_favicon",
-      "label": "favicon",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "favicon",
-      "source_file": "app.json",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_web_output",
-      "label": "output",
-      "_origin": "ast",
-      "community": 3,
-      "file_type": "code",
-      "norm_label": "output",
-      "source_file": "app.json",
-      "source_location": "L25"
-    },
-    {
-      "id": "package_dependencies",
-      "label": "dependencies",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "package.json",
-      "source_location": "L12"
-    },
-    {
-      "id": "package_dependencies_expo",
-      "label": "expo",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo",
-      "source_file": "package.json",
-      "source_location": "L20"
-    },
-    {
-      "id": "package_dependencies_expo_asset",
-      "label": "expo-asset",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo-asset",
-      "source_file": "package.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "package_dependencies_expo_dev_client",
-      "label": "expo-dev-client",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo-dev-client",
-      "source_file": "package.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "package_dependencies_expo_linking",
-      "label": "expo-linking",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo-linking",
-      "source_file": "package.json",
-      "source_location": "L23"
-    },
-    {
-      "id": "package_dependencies_expo_metro_runtime",
-      "label": "@expo/metro-runtime",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@expo/metro-runtime",
-      "source_file": "package.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "package_dependencies_expo_splash_screen",
-      "label": "expo-splash-screen",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo-splash-screen",
-      "source_file": "package.json",
-      "source_location": "L24"
-    },
-    {
-      "id": "package_dependencies_expo_system_ui",
-      "label": "expo-system-ui",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "expo-system-ui",
-      "source_file": "package.json",
-      "source_location": "L25"
-    },
-    {
-      "id": "package_dependencies_react",
+      "id": "ref_react",
       "label": "react",
       "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
+      "community": 2,
+      "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
       "source_location": "L26"
     },
     {
-      "id": "package_dependencies_react_dom",
-      "label": "react-dom",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-dom",
-      "source_file": "package.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "package_dependencies_react_native",
-      "label": "react-native",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-native",
-      "source_file": "package.json",
-      "source_location": "L28"
-    },
-    {
-      "id": "package_dependencies_react_native_async_storage_async_storage",
-      "label": "@react-native-async-storage/async-storage",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-native-async-storage/async-storage",
-      "source_file": "package.json",
-      "source_location": "L14"
-    },
-    {
-      "id": "package_dependencies_react_native_gesture_handler",
-      "label": "react-native-gesture-handler",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-native-gesture-handler",
-      "source_file": "package.json",
-      "source_location": "L29"
-    },
-    {
-      "id": "package_dependencies_react_native_picker_picker",
-      "label": "@react-native-picker/picker",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-native-picker/picker",
-      "source_file": "package.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "package_dependencies_react_native_safe_area_context",
-      "label": "react-native-safe-area-context",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-native-safe-area-context",
-      "source_file": "package.json",
-      "source_location": "L30"
-    },
-    {
-      "id": "package_dependencies_react_native_screens",
-      "label": "react-native-screens",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-native-screens",
-      "source_file": "package.json",
-      "source_location": "L31"
-    },
-    {
-      "id": "package_dependencies_react_native_web",
-      "label": "react-native-web",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "react-native-web",
-      "source_file": "package.json",
-      "source_location": "L32"
-    },
-    {
-      "id": "package_dependencies_react_navigation_bottom_tabs",
-      "label": "@react-navigation/bottom-tabs",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-navigation/bottom-tabs",
-      "source_file": "package.json",
-      "source_location": "L16"
-    },
-    {
-      "id": "package_dependencies_react_navigation_elements",
-      "label": "@react-navigation/elements",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-navigation/elements",
-      "source_file": "package.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "package_dependencies_react_navigation_native",
-      "label": "@react-navigation/native",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-navigation/native",
-      "source_file": "package.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "package_dependencies_react_navigation_native_stack",
-      "label": "@react-navigation/native-stack",
-      "_origin": "ast",
-      "community": 4,
-      "file_type": "code",
-      "norm_label": "@react-navigation/native-stack",
-      "source_file": "package.json",
-      "source_location": "L19"
-    },
-    {
       "id": "src_components_feedbackmodal",
       "label": "FeedbackModal.tsx",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackmodal.tsx",
       "source_file": "src/components/FeedbackModal.tsx",
@@ -1995,7 +1661,7 @@
       "id": "src_components_feedbackmodal_api_base_url",
       "label": "API_BASE_URL",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "api_base_url",
       "source_file": "src/components/FeedbackModal.tsx",
@@ -2005,7 +1671,7 @@
       "id": "src_components_feedbackmodal_styles",
       "label": "styles",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "styles",
       "source_file": "src/components/FeedbackModal.tsx",
@@ -2015,7 +1681,7 @@
       "id": "src_context_feedbackcontext",
       "label": "FeedbackContext.tsx",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackcontext.tsx",
       "source_file": "src/context/FeedbackContext.tsx",
@@ -2025,51 +1691,531 @@
       "id": "src_context_feedbackcontext_feedbackcontext",
       "label": "FeedbackContext",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "feedbackcontext",
       "source_file": "src/context/FeedbackContext.tsx",
       "source_location": "L30"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen",
-      "label": "BookAppointmentScreen.tsx",
+      "id": "src_navigation_screens_admindashboardscreen",
+      "label": "AdminDashboardScreen.tsx",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
-      "norm_label": "bookappointmentscreen.tsx",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "norm_label": "admindashboardscreen.tsx",
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_navigation_screens_bookappointmentscreen_api_base_url",
-      "label": "API_BASE_URL",
-      "_origin": "ast",
-      "community": 5,
-      "file_type": "code",
-      "norm_label": "api_base_url",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_navigation_screens_bookappointmentscreen_styles",
+      "id": "src_navigation_screens_admindashboardscreen_styles",
       "label": "styles",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "file_type": "code",
       "norm_label": "styles",
-      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
-      "source_location": "L600"
+      "source_file": "src/navigation/screens/AdminDashboardScreen.tsx",
+      "source_location": "L182"
     },
     {
-      "id": "ref_react_native_picker_picker",
+      "id": "src_navigation_screens_doctordashboardscreen",
+      "label": "DoctorDashboardScreen.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "doctordashboardscreen.tsx",
+      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_navigation_screens_doctordashboardscreen_styles",
+      "label": "styles",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/DoctorDashboardScreen.tsx",
+      "source_location": "L155"
+    },
+    {
+      "id": "src_navigation_screens_patientprofile",
+      "label": "PatientProfile.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "patientprofile.tsx",
+      "source_file": "src/navigation/screens/PatientProfile.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_navigation_screens_patientprofile_api_base_url",
+      "label": "API_BASE_URL",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "api_base_url",
+      "source_file": "src/navigation/screens/PatientProfile.tsx",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_navigation_screens_patientprofile_styles",
+      "label": "styles",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/PatientProfile.tsx",
+      "source_location": "L469"
+    },
+    {
+      "id": "src_utils_confirmaction",
+      "label": "confirmAction.ts",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "confirmaction.ts",
+      "source_file": "src/utils/confirmAction.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app",
+      "label": "app.json",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "app.json",
+      "source_file": "app.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_adaptiveicon_backgroundcolor",
+      "label": "backgroundColor",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "backgroundcolor",
+      "source_file": "app.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_adaptiveicon_foregroundimage",
+      "label": "foregroundImage",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "foregroundimage",
+      "source_file": "app.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "app_android_adaptiveicon",
+      "label": "adaptiveIcon",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "adaptiveicon",
+      "source_file": "app.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_android_package",
+      "label": "package",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "package",
+      "source_file": "app.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "app_expo",
+      "label": "expo",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "expo",
+      "source_file": "app.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "app_expo_android",
+      "label": "android",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "android",
+      "source_file": "app.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "app_expo_icon",
+      "label": "icon",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "icon",
+      "source_file": "app.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_expo_ios",
+      "label": "ios",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "ios",
+      "source_file": "app.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_expo_name",
+      "label": "name",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "name",
+      "source_file": "app.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_expo_newarchenabled",
+      "label": "newArchEnabled",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "newarchenabled",
+      "source_file": "app.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_expo_orientation",
+      "label": "orientation",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "orientation",
+      "source_file": "app.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "app_expo_plugins",
+      "label": "plugins",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "plugins",
+      "source_file": "app.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "app_expo_scheme",
+      "label": "scheme",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "scheme",
+      "source_file": "app.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_expo_slug",
+      "label": "slug",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "slug",
+      "source_file": "app.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "app_expo_userinterfacestyle",
+      "label": "userInterfaceStyle",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "userinterfacestyle",
+      "source_file": "app.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_expo_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "app.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_expo_web",
+      "label": "web",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "web",
+      "source_file": "app.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "app_ios_bundleidentifier",
+      "label": "bundleIdentifier",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "bundleidentifier",
+      "source_file": "app.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "app_ios_supportstablet",
+      "label": "supportsTablet",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "supportstablet",
+      "source_file": "app.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "app_web_bundler",
+      "label": "bundler",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "bundler",
+      "source_file": "app.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "app_web_favicon",
+      "label": "favicon",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "favicon",
+      "source_file": "app.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_web_output",
+      "label": "output",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "output",
+      "source_file": "app.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "package_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "package_dependencies_expo",
+      "label": "expo",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "package_dependencies_expo_asset",
+      "label": "expo-asset",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo-asset",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "package_dependencies_expo_dev_client",
+      "label": "expo-dev-client",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo-dev-client",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "package_dependencies_expo_linking",
+      "label": "expo-linking",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo-linking",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "package_dependencies_expo_metro_runtime",
+      "label": "@expo/metro-runtime",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@expo/metro-runtime",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "package_dependencies_expo_splash_screen",
+      "label": "expo-splash-screen",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo-splash-screen",
+      "source_file": "package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "package_dependencies_expo_system_ui",
+      "label": "expo-system-ui",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "expo-system-ui",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "package_dependencies_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "package_dependencies_react_dom",
+      "label": "react-dom",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-dom",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "package_dependencies_react_native",
+      "label": "react-native",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-native",
+      "source_file": "package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "package_dependencies_react_native_async_storage_async_storage",
+      "label": "@react-native-async-storage/async-storage",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@react-native-async-storage/async-storage",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "package_dependencies_react_native_gesture_handler",
+      "label": "react-native-gesture-handler",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-native-gesture-handler",
+      "source_file": "package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "package_dependencies_react_native_picker_picker",
       "label": "@react-native-picker/picker",
       "_origin": "ast",
       "community": 5,
-      "file_type": "concept",
+      "file_type": "code",
       "norm_label": "@react-native-picker/picker",
       "source_file": "package.json",
       "source_location": "L15"
+    },
+    {
+      "id": "package_dependencies_react_native_safe_area_context",
+      "label": "react-native-safe-area-context",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-native-safe-area-context",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "package_dependencies_react_native_screens",
+      "label": "react-native-screens",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-native-screens",
+      "source_file": "package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "package_dependencies_react_native_web",
+      "label": "react-native-web",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "react-native-web",
+      "source_file": "package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "package_dependencies_react_navigation_bottom_tabs",
+      "label": "@react-navigation/bottom-tabs",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@react-navigation/bottom-tabs",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "package_dependencies_react_navigation_elements",
+      "label": "@react-navigation/elements",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@react-navigation/elements",
+      "source_file": "package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "package_dependencies_react_navigation_native",
+      "label": "@react-navigation/native",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@react-navigation/native",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "package_dependencies_react_navigation_native_stack",
+      "label": "@react-navigation/native-stack",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "@react-navigation/native-stack",
+      "source_file": "package.json",
+      "source_location": "L19"
     },
     {
       "id": "android_app_src_main_java_com_myapp_mainapplication",
@@ -2122,70 +2268,10 @@
       "source_location": ""
     },
     {
-      "id": "src_context_authcontext",
-      "label": "AuthContext.tsx",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "authcontext.tsx",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_context_authcontext_authcontext",
-      "label": "AuthContext",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "authcontext",
-      "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen",
-      "label": "ChangeAppointmentTimeScreen.tsx",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "changeappointmenttimescreen.tsx",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_api_base_url",
-      "label": "API_BASE_URL",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "api_base_url",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_navigation_screens_changeappointmenttimescreen_styles",
-      "label": "styles",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "code",
-      "norm_label": "styles",
-      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L228"
-    },
-    {
-      "id": "ref_react_native_async_storage_async_storage",
-      "label": "@react-native-async-storage/async-storage",
-      "_origin": "ast",
-      "community": 7,
-      "file_type": "concept",
-      "norm_label": "@react-native-async-storage/async-storage",
-      "source_file": "package.json",
-      "source_location": "L14"
-    },
-    {
       "id": "android_app_src_main_java_com_myapp_mainactivity",
       "label": "MainActivity.kt",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "mainactivity.kt",
       "source_file": "android/app/src/main/java/com/myapp/MainActivity.kt",
@@ -2195,7 +2281,7 @@
       "id": "bundle",
       "label": "Bundle",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "bundle",
       "source_file": "",
@@ -2205,7 +2291,7 @@
       "id": "reactactivity",
       "label": "ReactActivity",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "reactactivity",
       "source_file": "",
@@ -2215,75 +2301,96 @@
       "id": "reactactivitydelegate",
       "label": "ReactActivityDelegate",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "file_type": "code",
       "norm_label": "reactactivitydelegate",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "package_scripts",
-      "label": "scripts",
+      "id": "src_navigation_screens_changeappointmenttimescreen",
+      "label": "ChangeAppointmentTimeScreen.tsx",
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "package.json",
-      "source_location": "L5"
+      "norm_label": "changeappointmenttimescreen.tsx",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "package_scripts_android",
-      "label": "android",
+      "id": "src_navigation_screens_changeappointmenttimescreen_api_base_url",
+      "label": "API_BASE_URL",
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "file_type": "code",
-      "norm_label": "android",
-      "source_file": "package.json",
-      "source_location": "L9"
+      "norm_label": "api_base_url",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L29"
     },
     {
-      "id": "package_scripts_ios",
-      "label": "ios",
+      "id": "src_navigation_screens_changeappointmenttimescreen_styles",
+      "label": "styles",
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "file_type": "code",
-      "norm_label": "ios",
-      "source_file": "package.json",
-      "source_location": "L10"
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
+      "source_location": "L227"
     },
     {
-      "id": "package_scripts_start",
-      "label": "start",
+      "id": "ref_react_native_async_storage_async_storage",
+      "label": "@react-native-async-storage/async-storage",
       "_origin": "ast",
-      "community": 9,
-      "file_type": "code",
-      "norm_label": "start",
+      "community": 8,
+      "file_type": "concept",
+      "norm_label": "@react-native-async-storage/async-storage",
       "source_file": "package.json",
-      "source_location": "L6"
+      "source_location": "L14"
     },
     {
-      "id": "package_scripts_web",
-      "label": "web",
+      "id": "src_navigation_screens_bookappointmentscreen",
+      "label": "BookAppointmentScreen.tsx",
       "_origin": "ast",
       "community": 9,
       "file_type": "code",
-      "norm_label": "web",
-      "source_file": "package.json",
-      "source_location": "L7"
+      "norm_label": "bookappointmentscreen.tsx",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "package_scripts_web_build",
-      "label": "web:build",
+      "id": "src_navigation_screens_bookappointmentscreen_api_base_url",
+      "label": "API_BASE_URL",
       "_origin": "ast",
       "community": 9,
       "file_type": "code",
-      "norm_label": "web:build",
+      "norm_label": "api_base_url",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_navigation_screens_bookappointmentscreen_styles",
+      "label": "styles",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "styles",
+      "source_file": "src/navigation/screens/BookAppointmentScreen.tsx",
+      "source_location": "L600"
+    },
+    {
+      "id": "ref_react_native_picker_picker",
+      "label": "@react-native-picker/picker",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "concept",
+      "norm_label": "@react-native-picker/picker",
       "source_file": "package.json",
-      "source_location": "L8"
+      "source_location": "L15"
     },
     {
       "id": "applicationlifecycledispatcher",
       "label": "applicationlifecycledispatcher",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2294,6 +2401,7 @@
     {
       "id": "defaultnewarchitectureentrypoint",
       "label": "defaultnewarchitectureentrypoint",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2304,6 +2412,7 @@
     {
       "id": "exporeacthostfactory",
       "label": "exporeacthostfactory",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2314,6 +2423,7 @@
     {
       "id": "loadreactnative",
       "label": "loadreactnative",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2324,6 +2434,7 @@
     {
       "id": "packagelist",
       "label": "packagelist",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2334,6 +2445,7 @@
     {
       "id": "reactpackage",
       "label": "reactpackage",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2344,6 +2456,7 @@
     {
       "id": "releaselevel",
       "label": "releaselevel",
+      "_origin": "semantic",
       "community": 6,
       "external": true,
       "file_type": "concept",
@@ -2354,7 +2467,8 @@
     {
       "id": "build",
       "label": "build",
-      "community": 8,
+      "_origin": "semantic",
+      "community": 7,
       "external": true,
       "file_type": "concept",
       "norm_label": "build",
@@ -2364,7 +2478,8 @@
     {
       "id": "fabricenabled",
       "label": "fabricenabled",
-      "community": 8,
+      "_origin": "semantic",
+      "community": 7,
       "external": true,
       "file_type": "concept",
       "norm_label": "fabricenabled",
@@ -2374,7 +2489,8 @@
     {
       "id": "reactactivitydelegatewrapper",
       "label": "reactactivitydelegatewrapper",
-      "community": 8,
+      "_origin": "semantic",
+      "community": 7,
       "external": true,
       "file_type": "concept",
       "norm_label": "reactactivitydelegatewrapper",
@@ -2384,7 +2500,8 @@
     {
       "id": "splashscreenmanager",
       "label": "splashscreenmanager",
-      "community": 8,
+      "_origin": "semantic",
+      "community": 7,
       "external": true,
       "file_type": "concept",
       "norm_label": "splashscreenmanager",
@@ -2498,7 +2615,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -2510,7 +2627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -2522,7 +2639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L82",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -2534,7 +2651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L218",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -2586,6 +2703,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "target": "src_context_authcontext_useauth",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_formfromdoctor",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "target": "src_utils_adminapi_adminrequest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
       "source": "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
       "target": "src_context_authcontext_useauth",
       "relation": "calls",
@@ -2594,7 +2747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L11",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -2606,7 +2759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L23",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -2678,7 +2831,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L121",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -2762,7 +2915,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L171",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -2787,6 +2940,18 @@
       "context": "call",
       "source_file": "src/navigation/screens/PatientProfile.tsx",
       "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_adminapi",
+      "target": "src_utils_apiconfig",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "src/utils/adminApi.ts",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -3459,6 +3624,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_context_authcontext",
+      "target": "src_utils_apiconfig_api_base_url",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "src_navigation_index",
       "target": "src_navigation_screens_homescreen_homescreen",
       "relation": "imports",
@@ -3468,30 +3645,6 @@
       "context": "import",
       "source_file": "src/navigation/index.tsx",
       "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
-      "target": "src_navigation_screens_aboutscreen_aboutscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
-      "target": "src_navigation_screens_loginscreen_loginscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -3544,54 +3697,6 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_navigation_screens_changepasswordscreen_changepasswordscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L34",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
-      "target": "src_navigation_screens_doctordashboardscreen_doctordashboardscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
-      "target": "src_navigation_screens_admindashboardscreen_admindashboardscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L36",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
-      "target": "src_navigation_screens_adminoverviewscreen_adminoverviewscreen",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/navigation/index.tsx",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_index",
       "target": "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
       "relation": "imports",
       "_origin": "ast",
@@ -3604,7 +3709,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_navigation_screens_adminaddadminscreen_adminaddadminscreen",
+      "target": "src_navigation_screens_adminadddoctorscreen_adminadddoctorscreen",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3616,7 +3721,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_navigation_screens_adminrecordsscreen_adminrecordsscreen",
+      "target": "src_navigation_screens_admineditdoctorscreen_admineditdoctorscreen",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3635,7 +3740,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L41",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -3647,7 +3752,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L42",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -3684,6 +3789,18 @@
       "context": "import",
       "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_adminadddoctorscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -3735,20 +3852,44 @@
       "weight": 1.0
     },
     {
-      "source": "src_navigation_screens_admindoctorsscreen",
+      "source": "src_navigation_screens_admindoctorformscreen",
       "target": "src_context_authcontext_useauth",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
       "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "src_navigation_screens_admindoctorsscreen",
+      "source": "src_navigation_screens_admindoctorformscreen",
       "target": "src_utils_appalert_alert",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_utils_adminapi_adminrequest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorsscreen",
+      "target": "src_context_authcontext_useauth",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3760,7 +3901,7 @@
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_utils_adminapi_adminrequest",
+      "target": "src_utils_appalert_alert",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3772,14 +3913,38 @@
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_utils_adminapi_api_base_url",
+      "target": "src_utils_adminapi_adminrequest",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorsscreen",
+      "target": "src_utils_apiconfig_api_base_url",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admineditdoctorscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -4324,6 +4489,18 @@
     },
     {
       "source": "src_context_authcontext",
+      "target": "src_utils_apiconfig",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/context/AuthContext.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_context_authcontext",
       "target": "ref_react_native_async_storage_async_storage",
       "relation": "imports_from",
       "_origin": "ast",
@@ -4564,7 +4741,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_navigation_screens_adminaddadminscreen",
+      "target": "src_navigation_screens_adminadddoctorscreen",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4576,7 +4753,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_navigation_screens_adminrecordsscreen",
+      "target": "src_navigation_screens_admineditdoctorscreen",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4588,7 +4765,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_context_feedbackcontext",
+      "target": "src_navigation_screens_adminaddadminscreen",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4600,7 +4777,7 @@
     },
     {
       "source": "src_navigation_index",
-      "target": "src_context_authcontext",
+      "target": "src_navigation_screens_adminrecordsscreen",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4608,6 +4785,30 @@
       "context": "import",
       "source_file": "src/navigation/index.tsx",
       "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_index",
+      "target": "src_context_feedbackcontext",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_index",
+      "target": "src_context_authcontext",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/index.tsx",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -4683,6 +4884,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_navigation_screens_adminadddoctorscreen",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_adminadddoctorscreen",
+      "target": "src_navigation_screens_admindoctorformscreen",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "src_navigation_screens_admindashboardscreen",
       "target": "ref_react",
       "relation": "imports_from",
@@ -4755,6 +4980,66 @@
       "weight": 1.0
     },
     {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "ref_react_native",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_context_authcontext",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_utils_appalert",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_utils_adminapi",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_navigation_screens_admindoctorsscreen",
       "target": "ref_react",
       "relation": "imports_from",
@@ -4780,7 +5065,7 @@
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_context_authcontext",
+      "target": "ref_react_navigation_native",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4792,7 +5077,7 @@
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_utils_appalert",
+      "target": "src_context_authcontext",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4804,7 +5089,7 @@
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_utils_adminapi",
+      "target": "src_utils_appalert",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4812,6 +5097,42 @@
       "context": "import",
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorsscreen",
+      "target": "src_utils_adminapi",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admineditdoctorscreen",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admineditdoctorscreen",
+      "target": "src_navigation_screens_admindoctorformscreen",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5415,14 +5736,14 @@
       "weight": 1.0
     },
     {
-      "source": "src_utils_adminapi",
+      "source": "src_utils_apiconfig",
       "target": "ref_react_native",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "src/utils/adminApi.ts",
+      "source_file": "src/utils/apiConfig.ts",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -5472,6 +5793,18 @@
       "context": "parameter_type",
       "source_file": "android/app/src/main/java/com/myapp/MainApplication.kt",
       "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_adminapi",
+      "target": "src_utils_apiconfig_api_base_url",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "re-export",
+      "source_file": "src/utils/adminApi.ts",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -6231,7 +6564,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -6242,7 +6575,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6253,7 +6586,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -6264,7 +6597,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -6275,7 +6608,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -6286,7 +6619,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/context/AuthContext.tsx",
-      "source_location": "L83",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -6341,7 +6674,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L172",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -6352,7 +6685,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L209",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -6363,7 +6696,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L346",
+      "source_location": "L350",
       "weight": 1.0
     },
     {
@@ -6374,7 +6707,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -6385,7 +6718,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L52",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -6396,7 +6729,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/index.tsx",
-      "source_location": "L79",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -6441,6 +6774,17 @@
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/AdminAddAdminScreen.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_adminadddoctorscreen",
+      "target": "src_navigation_screens_adminadddoctorscreen_adminadddoctorscreen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminAddDoctorScreen.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6499,6 +6843,72 @@
       "weight": 1.0
     },
     {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_styles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_weekdays",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_emptyform",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_formfromdoctor",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admindoctorformscreen",
+      "target": "src_navigation_screens_admindoctorformscreen_doctorform",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminDoctorFormScreen.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "src_navigation_screens_admindoctorsscreen",
       "target": "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
       "relation": "contains",
@@ -6506,18 +6916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_navigation_screens_admindoctorsscreen_styles",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L69",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6528,18 +6927,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
       "source": "src_navigation_screens_admindoctorsscreen",
-      "target": "src_navigation_screens_admindoctorsscreen_emptyform",
+      "target": "src_navigation_screens_admindoctorsscreen_styles",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/AdminDoctorsScreen.tsx",
-      "source_location": "L8",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "src_navigation_screens_admineditdoctorscreen",
+      "target": "src_navigation_screens_admineditdoctorscreen_admineditdoctorscreen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/navigation/screens/AdminEditDoctorScreen.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6682,7 +7092,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/ChangeAppointmentTimeScreen.tsx",
-      "source_location": "L228",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -6814,7 +7224,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/HomeScreen.tsx",
-      "source_location": "L418",
+      "source_location": "L415",
       "weight": 1.0
     },
     {
@@ -6924,7 +7334,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/PatientProfile.tsx",
-      "source_location": "L476",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
@@ -6957,7 +7367,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/navigation/screens/PatientRegistrationScreen.tsx",
-      "source_location": "L159",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -7001,18 +7411,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/utils/adminApi.ts",
-      "source_location": "L10",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "src_utils_adminapi",
-      "target": "src_utils_adminapi_api_base_url",
+      "source": "src_utils_apiconfig",
+      "target": "src_utils_apiconfig_api_base_url",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/utils/adminApi.ts",
-      "source_location": "L7",
+      "source_file": "src/utils/apiConfig.ts",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -7113,15 +7523,6 @@
       "source_file": "android/gradlew",
       "source_location": "L98",
       "weight": 1.0
-    },
-    {
-      "source": "src_types_d",
-      "target": "react_native",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/types.d.ts"
     },
     {
       "source": "android_app_src_main_java_com_myapp_mainapplication_mainapplication",
@@ -7247,5 +7648,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "785ffd313165c3641cd3a38911379b114f9f94d0"
+  "built_at_commit": "760cc79ef26d1c407ed2d7095f1da6f4ace81c94"
 }

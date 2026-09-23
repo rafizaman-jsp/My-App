@@ -1,46 +1,46 @@
 {
   "communities": {
     "0": [
-      "ref_react",
       "ref_react_native",
-      "src_navigation_index",
-      "src_navigation_index_backbutton",
-      "src_navigation_index_menuitems",
-      "src_navigation_index_stack",
-      "src_navigation_index_styles",
-      "src_navigation_screens_aboutscreen",
-      "src_navigation_screens_aboutscreen_aboutscreen",
-      "src_navigation_screens_aboutscreen_styles",
-      "src_navigation_screens_admindashboardscreen",
-      "src_navigation_screens_admindashboardscreen_admindashboardscreen",
-      "src_navigation_screens_admindashboardscreen_datasection",
-      "src_navigation_screens_admindashboardscreen_doctor",
-      "src_navigation_screens_admindashboardscreen_styles",
-      "src_navigation_screens_admindashboardscreen_summary",
+      "src_context_authcontext",
+      "src_context_authcontext_authcontext",
+      "src_context_authcontext_authcontexttype",
+      "src_context_authcontext_authprovider",
+      "src_context_authcontext_getwebuser",
+      "src_context_authcontext_parseuser",
+      "src_context_authcontext_useauth",
+      "src_navigation_screens_adminaddadminscreen",
+      "src_navigation_screens_adminaddadminscreen_adminaddadminscreen",
+      "src_navigation_screens_adminaddadminscreen_styles",
+      "src_navigation_screens_admindoctorsscreen",
+      "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
+      "src_navigation_screens_admindoctorsscreen_doctor",
+      "src_navigation_screens_admindoctorsscreen_styles",
+      "src_navigation_screens_adminoverviewscreen",
+      "src_navigation_screens_adminoverviewscreen_adminoverviewscreen",
+      "src_navigation_screens_adminoverviewscreen_styles",
+      "src_navigation_screens_adminrecordsscreen",
+      "src_navigation_screens_adminrecordsscreen_adminrecordsscreen",
+      "src_navigation_screens_adminrecordsscreen_config",
+      "src_navigation_screens_adminrecordsscreen_styles",
       "src_navigation_screens_changepasswordscreen",
       "src_navigation_screens_changepasswordscreen_changepasswordscreen",
       "src_navigation_screens_changepasswordscreen_styles",
-      "src_navigation_screens_doctordashboardscreen",
-      "src_navigation_screens_doctordashboardscreen_doctorappointment",
-      "src_navigation_screens_doctordashboardscreen_doctordashboardscreen",
-      "src_navigation_screens_doctordashboardscreen_styles",
-      "src_navigation_screens_homescreen",
-      "src_navigation_screens_homescreen_api_base_url",
-      "src_navigation_screens_homescreen_doctor",
-      "src_navigation_screens_homescreen_getapibaseurl",
-      "src_navigation_screens_homescreen_heroslide",
-      "src_navigation_screens_homescreen_homescreen",
-      "src_navigation_screens_homescreen_styles",
-      "src_navigation_screens_patientprofile",
-      "src_navigation_screens_patientprofile_api_base_url",
-      "src_navigation_screens_patientprofile_getapibaseurl",
-      "src_navigation_screens_patientprofile_patientprofilescreen",
-      "src_navigation_screens_patientprofile_styles",
+      "src_navigation_screens_loginscreen",
+      "src_navigation_screens_loginscreen_api_base_url",
+      "src_navigation_screens_loginscreen_getapibaseurl",
+      "src_navigation_screens_loginscreen_loginscreen",
+      "src_navigation_screens_loginscreen_styles",
       "src_navigation_screens_patientregistrationscreen",
       "src_navigation_screens_patientregistrationscreen_patientregistrationscreen",
       "src_navigation_screens_patientregistrationscreen_styles",
-      "src_utils_confirmaction",
-      "src_utils_confirmaction_confirmaction"
+      "src_utils_adminapi",
+      "src_utils_adminapi_adminrequest",
+      "src_utils_apiconfig",
+      "src_utils_apiconfig_api_base_url",
+      "src_utils_appalert",
+      "src_utils_appalert_alert",
+      "src_utils_appalert_alertbutton"
     ],
     "1": [
       "index",
@@ -78,36 +78,65 @@
       "src_navigation_index_navigation"
     ],
     "2": [
-      "src_context_authcontext_useauth",
+      "ref_react",
+      "src_navigation_index",
+      "src_navigation_index_backbutton",
       "src_navigation_index_menudropdown",
-      "src_navigation_screens_adminaddadminscreen",
-      "src_navigation_screens_adminaddadminscreen_adminaddadminscreen",
-      "src_navigation_screens_adminaddadminscreen_styles",
-      "src_navigation_screens_admindoctorsscreen",
-      "src_navigation_screens_admindoctorsscreen_admindoctorsscreen",
-      "src_navigation_screens_admindoctorsscreen_doctor",
-      "src_navigation_screens_admindoctorsscreen_emptyform",
-      "src_navigation_screens_admindoctorsscreen_styles",
-      "src_navigation_screens_adminoverviewscreen",
-      "src_navigation_screens_adminoverviewscreen_adminoverviewscreen",
-      "src_navigation_screens_adminoverviewscreen_styles",
-      "src_navigation_screens_adminrecordsscreen",
-      "src_navigation_screens_adminrecordsscreen_adminrecordsscreen",
-      "src_navigation_screens_adminrecordsscreen_config",
-      "src_navigation_screens_adminrecordsscreen_styles",
-      "src_navigation_screens_loginscreen",
-      "src_navigation_screens_loginscreen_api_base_url",
-      "src_navigation_screens_loginscreen_getapibaseurl",
-      "src_navigation_screens_loginscreen_loginscreen",
-      "src_navigation_screens_loginscreen_styles",
-      "src_utils_adminapi",
-      "src_utils_adminapi_adminrequest",
-      "src_utils_adminapi_api_base_url",
-      "src_utils_appalert",
-      "src_utils_appalert_alert",
-      "src_utils_appalert_alertbutton"
+      "src_navigation_index_menuitems",
+      "src_navigation_index_stack",
+      "src_navigation_index_styles",
+      "src_navigation_screens_aboutscreen",
+      "src_navigation_screens_aboutscreen_aboutscreen",
+      "src_navigation_screens_aboutscreen_styles",
+      "src_navigation_screens_adminadddoctorscreen",
+      "src_navigation_screens_adminadddoctorscreen_adminadddoctorscreen",
+      "src_navigation_screens_admindoctorformscreen",
+      "src_navigation_screens_admindoctorformscreen_admindoctorformscreen",
+      "src_navigation_screens_admindoctorformscreen_doctorform",
+      "src_navigation_screens_admindoctorformscreen_emptyform",
+      "src_navigation_screens_admindoctorformscreen_formfromdoctor",
+      "src_navigation_screens_admindoctorformscreen_styles",
+      "src_navigation_screens_admindoctorformscreen_weekdays",
+      "src_navigation_screens_admineditdoctorscreen",
+      "src_navigation_screens_admineditdoctorscreen_admineditdoctorscreen",
+      "src_navigation_screens_homescreen",
+      "src_navigation_screens_homescreen_api_base_url",
+      "src_navigation_screens_homescreen_doctor",
+      "src_navigation_screens_homescreen_getapibaseurl",
+      "src_navigation_screens_homescreen_heroslide",
+      "src_navigation_screens_homescreen_homescreen",
+      "src_navigation_screens_homescreen_styles"
     ],
     "3": [
+      "src_components_feedbackmodal",
+      "src_components_feedbackmodal_api_base_url",
+      "src_components_feedbackmodal_feedbackmodal",
+      "src_components_feedbackmodal_getapibaseurl",
+      "src_components_feedbackmodal_styles",
+      "src_context_feedbackcontext",
+      "src_context_feedbackcontext_feedbackcontext",
+      "src_context_feedbackcontext_feedbackcontexttype",
+      "src_context_feedbackcontext_feedbackprovider",
+      "src_context_feedbackcontext_usefeedback",
+      "src_navigation_screens_admindashboardscreen",
+      "src_navigation_screens_admindashboardscreen_admindashboardscreen",
+      "src_navigation_screens_admindashboardscreen_datasection",
+      "src_navigation_screens_admindashboardscreen_doctor",
+      "src_navigation_screens_admindashboardscreen_styles",
+      "src_navigation_screens_admindashboardscreen_summary",
+      "src_navigation_screens_doctordashboardscreen",
+      "src_navigation_screens_doctordashboardscreen_doctorappointment",
+      "src_navigation_screens_doctordashboardscreen_doctordashboardscreen",
+      "src_navigation_screens_doctordashboardscreen_styles",
+      "src_navigation_screens_patientprofile",
+      "src_navigation_screens_patientprofile_api_base_url",
+      "src_navigation_screens_patientprofile_getapibaseurl",
+      "src_navigation_screens_patientprofile_patientprofilescreen",
+      "src_navigation_screens_patientprofile_styles",
+      "src_utils_confirmaction",
+      "src_utils_confirmaction_confirmaction"
+    ],
+    "4": [
       "app",
       "app_adaptiveicon_backgroundcolor",
       "app_adaptiveicon_foregroundimage",
@@ -132,7 +161,7 @@
       "app_web_favicon",
       "app_web_output"
     ],
-    "4": [
+    "5": [
       "package_dependencies",
       "package_dependencies_expo",
       "package_dependencies_expo_asset",
@@ -155,26 +184,6 @@
       "package_dependencies_react_navigation_native",
       "package_dependencies_react_navigation_native_stack"
     ],
-    "5": [
-      "ref_react_native_picker_picker",
-      "src_components_feedbackmodal",
-      "src_components_feedbackmodal_api_base_url",
-      "src_components_feedbackmodal_feedbackmodal",
-      "src_components_feedbackmodal_getapibaseurl",
-      "src_components_feedbackmodal_styles",
-      "src_context_feedbackcontext",
-      "src_context_feedbackcontext_feedbackcontext",
-      "src_context_feedbackcontext_feedbackcontexttype",
-      "src_context_feedbackcontext_feedbackprovider",
-      "src_context_feedbackcontext_usefeedback",
-      "src_navigation_screens_bookappointmentscreen",
-      "src_navigation_screens_bookappointmentscreen_api_base_url",
-      "src_navigation_screens_bookappointmentscreen_bookappointmentscreen",
-      "src_navigation_screens_bookappointmentscreen_doctor",
-      "src_navigation_screens_bookappointmentscreen_getapibaseurl",
-      "src_navigation_screens_bookappointmentscreen_styles",
-      "src_navigation_screens_bookappointmentscreen_timeslot"
-    ],
     "6": [
       "android_app_src_main_java_com_myapp_mainapplication",
       "android_app_src_main_java_com_myapp_mainapplication_mainapplication",
@@ -193,23 +202,6 @@
       "releaselevel"
     ],
     "7": [
-      "ref_react_native_async_storage_async_storage",
-      "src_context_authcontext",
-      "src_context_authcontext_authcontext",
-      "src_context_authcontext_authcontexttype",
-      "src_context_authcontext_authprovider",
-      "src_context_authcontext_getwebuser",
-      "src_context_authcontext_parseuser",
-      "src_navigation_screens_changeappointmenttimescreen",
-      "src_navigation_screens_changeappointmenttimescreen_api_base_url",
-      "src_navigation_screens_changeappointmenttimescreen_changeappointmenttimescreen",
-      "src_navigation_screens_changeappointmenttimescreen_getapibaseurl",
-      "src_navigation_screens_changeappointmenttimescreen_normalizeappointmentdate",
-      "src_navigation_screens_changeappointmenttimescreen_normalizetime",
-      "src_navigation_screens_changeappointmenttimescreen_styles",
-      "src_navigation_screens_changeappointmenttimescreen_timeslot"
-    ],
-    "8": [
       "android_app_src_main_java_com_myapp_mainactivity",
       "android_app_src_main_java_com_myapp_mainactivity_mainactivity",
       "android_app_src_main_java_com_myapp_mainactivity_mainactivity_createreactactivitydelegate",
@@ -225,7 +217,28 @@
       "reactactivitydelegatewrapper",
       "splashscreenmanager"
     ],
+    "8": [
+      "ref_react_native_async_storage_async_storage",
+      "src_navigation_screens_changeappointmenttimescreen",
+      "src_navigation_screens_changeappointmenttimescreen_api_base_url",
+      "src_navigation_screens_changeappointmenttimescreen_changeappointmenttimescreen",
+      "src_navigation_screens_changeappointmenttimescreen_getapibaseurl",
+      "src_navigation_screens_changeappointmenttimescreen_normalizeappointmentdate",
+      "src_navigation_screens_changeappointmenttimescreen_normalizetime",
+      "src_navigation_screens_changeappointmenttimescreen_styles",
+      "src_navigation_screens_changeappointmenttimescreen_timeslot"
+    ],
     "9": [
+      "ref_react_native_picker_picker",
+      "src_navigation_screens_bookappointmentscreen",
+      "src_navigation_screens_bookappointmentscreen_api_base_url",
+      "src_navigation_screens_bookappointmentscreen_bookappointmentscreen",
+      "src_navigation_screens_bookappointmentscreen_doctor",
+      "src_navigation_screens_bookappointmentscreen_getapibaseurl",
+      "src_navigation_screens_bookappointmentscreen_styles",
+      "src_navigation_screens_bookappointmentscreen_timeslot"
+    ],
+    "10": [
       "package_scripts",
       "package_scripts_android",
       "package_scripts_ios",
@@ -233,7 +246,7 @@
       "package_scripts_web",
       "package_scripts_web_build"
     ],
-    "10": [
+    "11": [
       "ref_expo_tsconfig_base",
       "tsconfig",
       "tsconfig_compileroptions",
@@ -241,66 +254,66 @@
       "tsconfig_compileroptions_strict",
       "tsconfig_extends"
     ],
-    "11": [
+    "12": [
       "android_gradlew",
       "android_gradlew__entry",
       "android_gradlew_die",
       "android_gradlew_warn"
     ],
-    "12": [
-      "react_native",
+    "13": [
       "src_types_d",
       "src_types_d_jpg",
       "src_types_d_png"
     ],
-    "13": [
+    "14": [
       "android_app_build"
     ],
-    "14": [
+    "15": [
       "android_build"
     ],
-    "15": [
+    "16": [
       "android_settings"
     ]
   },
   "cohesion": {
-    "0": 0.08717948717948718,
+    "0": 0.1141025641025641,
     "1": 0.07386363636363637,
-    "2": 0.1402116402116402,
-    "3": 0.08695652173913043,
-    "4": 0.09523809523809523,
-    "5": 0.13071895424836602,
+    "2": 0.10052910052910052,
+    "3": 0.11396011396011396,
+    "4": 0.08695652173913043,
+    "5": 0.09523809523809523,
     "6": 0.17142857142857143,
-    "7": 0.18095238095238095,
-    "8": 0.18681318681318682,
-    "9": 0.3333333333333333,
+    "7": 0.18681318681318682,
+    "8": 0.2777777777777778,
+    "9": 0.25,
     "10": 0.3333333333333333,
-    "11": 0.8333333333333334,
-    "12": 0.5,
-    "13": 1.0,
+    "11": 0.3333333333333333,
+    "12": 0.8333333333333334,
+    "13": 0.6666666666666666,
     "14": 1.0,
-    "15": 1.0
+    "15": 1.0,
+    "16": 1.0
   },
   "gods": [
     {
       "id": "src_context_authcontext_useauth",
       "label": "useAuth()",
-      "degree": 28
+      "degree": 30
     },
     {
       "id": "ref_react_native",
       "label": "react-native",
-      "degree": 22
+      "degree": 23
     },
     {
       "id": "ref_react",
       "label": "react",
-      "degree": 18
+      "degree": 21
     },
     {
       "id": "src_utils_appalert_alert",
       "label": "Alert",
-      "degree": 14
+      "degree": 15
     },
     {
       "id": "app_expo",
@@ -315,7 +328,7 @@
     {
       "id": "src_utils_adminapi_adminrequest",
       "label": "adminRequest()",
-      "degree": 9
+      "degree": 11
     },
     {
       "id": "src_utils_confirmaction_confirmaction",
@@ -323,28 +336,17 @@
       "degree": 7
     },
     {
-      "id": "android_app_src_main_java_com_myapp_mainactivity_mainactivity",
-      "label": "MainActivity",
+      "id": "android_app_src_main_java_com_myapp_mainapplication_mainapplication",
+      "label": "MainApplication",
       "degree": 6
     },
     {
-      "id": "android_app_src_main_java_com_myapp_mainapplication_mainapplication",
-      "label": "MainApplication",
+      "id": "android_app_src_main_java_com_myapp_mainactivity_mainactivity",
+      "label": "MainActivity",
       "degree": 6
     }
   ],
   "surprises": [
-    {
-      "source": "FeedbackModal()",
-      "target": "useAuth()",
-      "source_files": [
-        "src/components/FeedbackModal.tsx",
-        "src/context/AuthContext.tsx"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
     {
       "source": "MenuDropdown()",
       "target": "useAuth()",
@@ -354,18 +356,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
-      "why": "peripheral node `MenuDropdown()` unexpectedly reaches hub `useAuth()`"
-    },
-    {
-      "source": "Navigation()",
-      "target": "useAuth()",
-      "source_files": [
-        "src/navigation/index.tsx",
-        "src/context/AuthContext.tsx"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
+      "why": "bridges separate communities; peripheral node `MenuDropdown()` unexpectedly reaches hub `useAuth()`"
     },
     {
       "source": "AdminDashboardScreen()",
@@ -379,15 +370,37 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "BookAppointmentScreen()",
+      "source": "ChangePasswordScreen()",
       "target": "useAuth()",
       "source_files": [
-        "src/navigation/screens/BookAppointmentScreen.tsx",
+        "src/navigation/screens/ChangePasswordScreen.tsx",
+        "src/context/AuthContext.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `ChangePasswordScreen()` unexpectedly reaches hub `useAuth()`"
+    },
+    {
+      "source": "DoctorDashboardScreen()",
+      "target": "useAuth()",
+      "source_files": [
+        "src/navigation/screens/DoctorDashboardScreen.tsx",
         "src/context/AuthContext.tsx"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "bridges separate communities"
+    },
+    {
+      "source": "LoginScreen()",
+      "target": "useAuth()",
+      "source_files": [
+        "src/navigation/screens/LoginScreen.tsx",
+        "src/context/AuthContext.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `LoginScreen()` unexpectedly reaches hub `useAuth()`"
     }
   ],
   "tokens": {

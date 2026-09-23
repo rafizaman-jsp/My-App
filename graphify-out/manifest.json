@@ -72,10 +72,10 @@
     "semantic_hash": "09f3598e64cc19b575f9ce08968e4a7e"
   },
   "src/context/AuthContext.tsx": {
-    "mtime": 1788547730.7733994,
-    "seen": 1790154414.4987261,
-    "ast_hash": "4798ace948c4f9aad5bc36b2b795b26a",
-    "semantic_hash": "4798ace948c4f9aad5bc36b2b795b26a"
+    "mtime": 1790166446.3676794,
+    "seen": 1790181456.863445,
+    "ast_hash": "40a19721d5b627e449217bfa7e80b210",
+    "semantic_hash": "40a19721d5b627e449217bfa7e80b210"
   },
   "src/context/FeedbackContext.tsx": {
     "mtime": 1788546631.5993006,
@@ -84,10 +84,10 @@
     "semantic_hash": "a2aca6b319838b8f2d2ab5fe6be950bc"
   },
   "src/navigation/index.tsx": {
-    "mtime": 1789019224.631851,
-    "seen": 1790154414.4987326,
-    "ast_hash": "12b2c3570941d733b841d4873538d29a",
-    "semantic_hash": "12b2c3570941d733b841d4873538d29a"
+    "mtime": 1790162995.124721,
+    "seen": 1790181456.863763,
+    "ast_hash": "cd6512bfcc3b64b5941fddc5bc25ef75",
+    "semantic_hash": "cd6512bfcc3b64b5941fddc5bc25ef75"
   },
   "src/navigation/screens/AboutScreen.js": {
     "mtime": 1788533861.4262204,
@@ -108,10 +108,10 @@
     "semantic_hash": "b4c8c7c380b0db9906b4a56deb0d935c"
   },
   "src/navigation/screens/AdminDoctorsScreen.tsx": {
-    "mtime": 1788550237.7919142,
-    "seen": 1790154414.4987445,
-    "ast_hash": "44a87ac24452288098637e2f8cab6fa3",
-    "semantic_hash": "44a87ac24452288098637e2f8cab6fa3"
+    "mtime": 1790162988.0990891,
+    "seen": 1790181456.8647149,
+    "ast_hash": "a13b50ab16753effd6461a53af70d334",
+    "semantic_hash": "a13b50ab16753effd6461a53af70d334"
   },
   "src/navigation/screens/AdminOverviewScreen.tsx": {
     "mtime": 1788550237.7981777,
@@ -126,16 +126,16 @@
     "semantic_hash": "4fda36dcee6adf9c3d03422fbf915f63"
   },
   "src/navigation/screens/BookAppointmentScreen.tsx": {
-    "mtime": 1788548792.658337,
-    "seen": 1790154414.4987535,
-    "ast_hash": "9fa6b41670905e61f6b2ac67f3e722b5",
-    "semantic_hash": "9fa6b41670905e61f6b2ac67f3e722b5"
+    "mtime": 1790162303.2975552,
+    "seen": 1790181456.8653572,
+    "ast_hash": "405ead722dc44c4a79b6ce4196e6cd86",
+    "semantic_hash": "405ead722dc44c4a79b6ce4196e6cd86"
   },
   "src/navigation/screens/ChangeAppointmentTimeScreen.tsx": {
-    "mtime": 1788548792.690393,
-    "seen": 1790154414.4987574,
-    "ast_hash": "033f4d7f15c33901ac44c71363592624",
-    "semantic_hash": "033f4d7f15c33901ac44c71363592624"
+    "mtime": 1790166055.6220353,
+    "seen": 1790181456.8653617,
+    "ast_hash": "f5be914554721cdcbd2d1bc2e3cc561e",
+    "semantic_hash": "f5be914554721cdcbd2d1bc2e3cc561e"
   },
   "src/navigation/screens/ChangePasswordScreen.tsx": {
     "mtime": 1788548899.8080273,
@@ -150,10 +150,10 @@
     "semantic_hash": "764f9f268c48761fdf96732609421077"
   },
   "src/navigation/screens/HomeScreen.tsx": {
-    "mtime": 1789709632.126795,
-    "seen": 1790154414.4987667,
-    "ast_hash": "07e55fc9697d72bcd461996b5c3af6c1",
-    "semantic_hash": "07e55fc9697d72bcd461996b5c3af6c1"
+    "mtime": 1790166054.3064537,
+    "seen": 1790181456.8662598,
+    "ast_hash": "e5226ad7caf5899003e5390d203208a9",
+    "semantic_hash": "e5226ad7caf5899003e5390d203208a9"
   },
   "src/navigation/screens/LoginScreen.tsx": {
     "mtime": 1788548792.6862102,
@@ -162,16 +162,16 @@
     "semantic_hash": "337fadc0e61652fbdda465fb67d37fac"
   },
   "src/navigation/screens/PatientProfile.tsx": {
-    "mtime": 1788548792.6970658,
-    "seen": 1790154414.4987726,
-    "ast_hash": "a91ad3cb0ba7fb30cab83582e32656ed",
-    "semantic_hash": "a91ad3cb0ba7fb30cab83582e32656ed"
+    "mtime": 1790166052.8150592,
+    "seen": 1790181456.866576,
+    "ast_hash": "89a5efbfe0fc540c8ff4d65005a36830",
+    "semantic_hash": "89a5efbfe0fc540c8ff4d65005a36830"
   },
   "src/navigation/screens/PatientRegistrationScreen.tsx": {
-    "mtime": 1788548899.809013,
-    "seen": 1790154414.4987755,
-    "ast_hash": "db36e405f804277a496d14c80be8acb5",
-    "semantic_hash": "db36e405f804277a496d14c80be8acb5"
+    "mtime": 1790165960.65452,
+    "seen": 1790181456.86658,
+    "ast_hash": "87c6f4d649e39d43a9b2d263fa2514e2",
+    "semantic_hash": "87c6f4d649e39d43a9b2d263fa2514e2"
   },
   "src/types.d.ts": {
     "mtime": 1784612945.948769,
@@ -180,10 +180,10 @@
     "semantic_hash": "888eb607c3628d52ea646bf040625171"
   },
   "src/utils/adminApi.ts": {
-    "mtime": 1788550237.7853591,
-    "seen": 1790154414.4987817,
-    "ast_hash": "69fc811b2e566c2d594d7b7c1a63474b",
-    "semantic_hash": "69fc811b2e566c2d594d7b7c1a63474b"
+    "mtime": 1790166445.0825367,
+    "seen": 1790181456.8669188,
+    "ast_hash": "4de631fb27f0d122cf614f6c85c5ca72",
+    "semantic_hash": "4de631fb27f0d122cf614f6c85c5ca72"
   },
   "src/utils/appAlert.ts": {
     "mtime": 1788548792.7170095,
@@ -202,5 +202,29 @@
     "seen": 1790154414.4987907,
     "ast_hash": "ad971a60aa0dd55a091e4e87776fdef6",
     "semantic_hash": "ad971a60aa0dd55a091e4e87776fdef6"
+  },
+  "src/navigation/screens/AdminAddDoctorScreen.tsx": {
+    "mtime": 1790162991.4613369,
+    "seen": 1790181456.86439,
+    "ast_hash": "9d29ead518fc90bf3a5b4154542f607b",
+    "semantic_hash": "9d29ead518fc90bf3a5b4154542f607b"
+  },
+  "src/navigation/screens/AdminDoctorFormScreen.tsx": {
+    "mtime": 1790173014.2778773,
+    "seen": 1790181456.8647099,
+    "ast_hash": "0dafb456c596044cfa5c14e8c2ada0a6",
+    "semantic_hash": "0dafb456c596044cfa5c14e8c2ada0a6"
+  },
+  "src/navigation/screens/AdminEditDoctorScreen.tsx": {
+    "mtime": 1790162993.228369,
+    "seen": 1790181456.864719,
+    "ast_hash": "cdfd3cd2af67ab0e7d0b8919fc2facd0",
+    "semantic_hash": "cdfd3cd2af67ab0e7d0b8919fc2facd0"
+  },
+  "src/utils/apiConfig.ts": {
+    "mtime": 1790166443.84167,
+    "seen": 1790181456.866924,
+    "ast_hash": "b2b6b97f7d8c7de5d75f7516aadeceb3",
+    "semantic_hash": "b2b6b97f7d8c7de5d75f7516aadeceb3"
   }
 }
