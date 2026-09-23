@@ -23,6 +23,16 @@ const getWebUser = () => Platform.OS === 'web' && typeof window !== 'undefined'
   ? window.localStorage.getItem(USER_STORAGE_KEY)
   : null;
 
+const parseUser = (value: string | null) => {
+    if (!value) return null;
+    try {
+        const parsed = JSON.parse(value);
+        return parsed?.userId && parsed?.role && parsed?.token ? parsed : null;
+    } catch {
+        return null;
+    }
+};
+  
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setStoredUser] = useState<any | null>(null);
   const [userToken, setUserToken] = useState<string | null>(null);
@@ -31,14 +41,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     AsyncStorage.getItem(USER_STORAGE_KEY)
       .then((savedUser) => {
-        const parsedUser = JSON.parse(savedUser || getWebUser() || 'null');
+        const parsedUser = parseUser(savedUser) || parseUser(getWebUser());
         if (parsedUser) {
           setStoredUser(parsedUser);
           setUserToken(parsedUser.token || null);
         }
       })
       .catch(() => {
-        const parsedUser = JSON.parse(getWebUser() || 'null');
+        const parsedUser = parseUser(getWebUser());
         if (parsedUser) {
           setStoredUser(parsedUser);
           setUserToken(parsedUser.token || null);

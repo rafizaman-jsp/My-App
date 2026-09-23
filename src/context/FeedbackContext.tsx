@@ -9,16 +9,11 @@
  * 2. Use useFeedback hook in any component to access context
  */
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // ==================== TYPE DEFINITIONS ====================
 
 interface FeedbackContextType {
-  user: any | null;
-  isAuthLoading: boolean;
-  setUser: (user: any | null) => Promise<void>;
-
   /** Whether feedback modal is visible */
   isVisible: boolean;
 
@@ -28,17 +23,11 @@ interface FeedbackContextType {
   /** Close feedback modal */
   closeFeedback: () => void;
 
-  /** User token for authenticated feedback submission */
-  userToken: string | null;
-
-  /** Set user token (called after login) */
-  setUserToken: (token: string | null) => void;
 }
 
 // ==================== CONTEXT ====================
 
 const FeedbackContext = createContext<FeedbackContextType | undefined>(undefined);
-const USER_STORAGE_KEY = 'mad-pms-auth-user';
 
 // ==================== PROVIDER COMPONENT ====================
 
@@ -56,53 +45,19 @@ export function FeedbackProvider({ children }: { children: ReactNode }) {
   /** Feedback modal visibility */
   const [isVisible, setIsVisible] = useState(false);
 
-  /** User token for authenticated requests */
-  const [userToken, setUserToken] = useState<string | null>(null);
-
-  const [user, setStoredUser] = useState<any | null>(null);
-  const [isAuthLoading, setIsAuthLoading] = useState(true);
-
-  useEffect(() => {
-    AsyncStorage.getItem(USER_STORAGE_KEY)
-      .then((savedUser) => {
-        if (savedUser) {
-          const parsedUser = JSON.parse(savedUser);
-          setStoredUser(parsedUser);
-          setUserToken(parsedUser.token || null);
-        }
-      })
-      .catch(() => AsyncStorage.removeItem(USER_STORAGE_KEY))
-      .finally(() => setIsAuthLoading(false));
-  }, []);
-
   // ==================== HANDLERS ====================
 
   const openFeedback = () => setIsVisible(true);
   const closeFeedback = () => setIsVisible(false);
-
-  const setUser = async (nextUser: any | null) => {
-    setStoredUser(nextUser);
-    setUserToken(nextUser?.token || null);
-    if (nextUser) {
-      await AsyncStorage.setItem(USER_STORAGE_KEY, JSON.stringify(nextUser));
-    } else {
-      await AsyncStorage.removeItem(USER_STORAGE_KEY);
-    }
-  };
 
   // ==================== RENDER ====================
 
   return (
     <FeedbackContext.Provider
       value={{
-        user,
-        isAuthLoading,
-        setUser,
         isVisible,
         openFeedback,
         closeFeedback,
-        userToken,
-        setUserToken,
       }}
     >
       {children}
