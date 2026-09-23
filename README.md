@@ -47,6 +47,29 @@ It includes the following:
 
 - In the terminal running the development server, press `i` to open the iOS simulator, `a` to open the Android device or emulator, or `w` to open the web browser.
 
+### Web
+
+Start the browser version with:
+
+```sh
+npm run web
+```
+
+Create a production web export with:
+
+```sh
+npm run web:build
+```
+
+The web app uses `http://localhost:8080` for the Java API by default. When the API is hosted at another URL, set `EXPO_PUBLIC_API_BASE_URL` before starting Expo, for example:
+
+```powershell
+$env:EXPO_PUBLIC_API_BASE_URL = "http://192.168.0.106:8080"
+npm run web
+```
+
+The Java API must be running and reachable from the browser. Its CORS configuration already allows web requests.
+
 ## Notes
 
 This project uses a [development build](https://docs.expo.dev/develop/development-builds/introduction/) and cannot be run with [Expo Go](https://expo.dev/go). To run the app with Expo Go, edit the `package.json` file, remove the `expo-dev-client` package and `--dev-client` flag from the `start` script.
