@@ -1,0 +1,206 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1784613085.9968126,
+    "seen": 1790154414.4986727,
+    "ast_hash": "dc580fca35a0e98ed20777ede5e545a1",
+    "semantic_hash": "dc580fca35a0e98ed20777ede5e545a1"
+  },
+  "android/app/build.gradle": {
+    "mtime": 1788461443.4651022,
+    "seen": 1790154414.4986856,
+    "ast_hash": "b1a2df7838c0ec505a59e1276e0fa1cf",
+    "semantic_hash": "b1a2df7838c0ec505a59e1276e0fa1cf"
+  },
+  "android/app/src/main/java/com/myapp/MainActivity.kt": {
+    "mtime": 1788461443.2062051,
+    "seen": 1790154414.4986918,
+    "ast_hash": "f95ce9372abe95026177e80695e6a0b2",
+    "semantic_hash": "f95ce9372abe95026177e80695e6a0b2"
+  },
+  "android/app/src/main/java/com/myapp/MainApplication.kt": {
+    "mtime": 1788461434.9247699,
+    "seen": 1790154414.4986959,
+    "ast_hash": "7534b987ad5437f528b74110f670dca3",
+    "semantic_hash": "7534b987ad5437f528b74110f670dca3"
+  },
+  "android/build.gradle": {
+    "mtime": 1788461443.4606507,
+    "seen": 1790154414.4986997,
+    "ast_hash": "55cec08c744fbe7b1f1294009fe3f65d",
+    "semantic_hash": "55cec08c744fbe7b1f1294009fe3f65d"
+  },
+  "android/gradlew": {
+    "mtime": 1788461434.0508726,
+    "seen": 1790154414.498703,
+    "ast_hash": "780b1d3e23a3b82154795f73df943a14",
+    "semantic_hash": "780b1d3e23a3b82154795f73df943a14"
+  },
+  "android/settings.gradle": {
+    "mtime": 1788461443.4585147,
+    "seen": 1790154414.4987063,
+    "ast_hash": "9768824bb540bb2ac4ca86d7bad2e504",
+    "semantic_hash": "9768824bb540bb2ac4ca86d7bad2e504"
+  },
+  "app.json": {
+    "mtime": 1788536234.971391,
+    "seen": 1790154414.4987097,
+    "ast_hash": "caa881f445798378860431c8a0712d04",
+    "semantic_hash": "caa881f445798378860431c8a0712d04"
+  },
+  "index.tsx": {
+    "mtime": 1784612945.9205213,
+    "seen": 1790154414.4987128,
+    "ast_hash": "704d788cd5a8ae9e79bc375392299113",
+    "semantic_hash": "704d788cd5a8ae9e79bc375392299113"
+  },
+  "package.json": {
+    "mtime": 1788541290.7684896,
+    "seen": 1790154414.498716,
+    "ast_hash": "0078eaba231ae91182921524a148564d",
+    "semantic_hash": "0078eaba231ae91182921524a148564d"
+  },
+  "src/App.tsx": {
+    "mtime": 1788546631.6033103,
+    "seen": 1790154414.4987192,
+    "ast_hash": "7690e186c152dbbfbb33132b9fe422e0",
+    "semantic_hash": "7690e186c152dbbfbb33132b9fe422e0"
+  },
+  "src/components/FeedbackModal.tsx": {
+    "mtime": 1788548792.685217,
+    "seen": 1790154414.498723,
+    "ast_hash": "09f3598e64cc19b575f9ce08968e4a7e",
+    "semantic_hash": "09f3598e64cc19b575f9ce08968e4a7e"
+  },
+  "src/context/AuthContext.tsx": {
+    "mtime": 1788547730.7733994,
+    "seen": 1790154414.4987261,
+    "ast_hash": "4798ace948c4f9aad5bc36b2b795b26a",
+    "semantic_hash": "4798ace948c4f9aad5bc36b2b795b26a"
+  },
+  "src/context/FeedbackContext.tsx": {
+    "mtime": 1788546631.5993006,
+    "seen": 1790154414.4987295,
+    "ast_hash": "a2aca6b319838b8f2d2ab5fe6be950bc",
+    "semantic_hash": "a2aca6b319838b8f2d2ab5fe6be950bc"
+  },
+  "src/navigation/index.tsx": {
+    "mtime": 1789019224.631851,
+    "seen": 1790154414.4987326,
+    "ast_hash": "12b2c3570941d733b841d4873538d29a",
+    "semantic_hash": "12b2c3570941d733b841d4873538d29a"
+  },
+  "src/navigation/screens/AboutScreen.js": {
+    "mtime": 1788533861.4262204,
+    "seen": 1790154414.4987357,
+    "ast_hash": "2e3fb16579aa2d27fe41e0828ef6ad8a",
+    "semantic_hash": "2e3fb16579aa2d27fe41e0828ef6ad8a"
+  },
+  "src/navigation/screens/AdminAddAdminScreen.tsx": {
+    "mtime": 1788550237.7959373,
+    "seen": 1790154414.4987388,
+    "ast_hash": "ae8e8b666a9c0719dea6317ec590af8a",
+    "semantic_hash": "ae8e8b666a9c0719dea6317ec590af8a"
+  },
+  "src/navigation/screens/AdminDashboardScreen.tsx": {
+    "mtime": 1788689813.6413033,
+    "seen": 1790154414.4987414,
+    "ast_hash": "b4c8c7c380b0db9906b4a56deb0d935c",
+    "semantic_hash": "b4c8c7c380b0db9906b4a56deb0d935c"
+  },
+  "src/navigation/screens/AdminDoctorsScreen.tsx": {
+    "mtime": 1788550237.7919142,
+    "seen": 1790154414.4987445,
+    "ast_hash": "44a87ac24452288098637e2f8cab6fa3",
+    "semantic_hash": "44a87ac24452288098637e2f8cab6fa3"
+  },
+  "src/navigation/screens/AdminOverviewScreen.tsx": {
+    "mtime": 1788550237.7981777,
+    "seen": 1790154414.4987478,
+    "ast_hash": "cc12c3860f22943153dfddc211a23e77",
+    "semantic_hash": "cc12c3860f22943153dfddc211a23e77"
+  },
+  "src/navigation/screens/AdminRecordsScreen.tsx": {
+    "mtime": 1788550237.7981777,
+    "seen": 1790154414.4987507,
+    "ast_hash": "4fda36dcee6adf9c3d03422fbf915f63",
+    "semantic_hash": "4fda36dcee6adf9c3d03422fbf915f63"
+  },
+  "src/navigation/screens/BookAppointmentScreen.tsx": {
+    "mtime": 1788548792.658337,
+    "seen": 1790154414.4987535,
+    "ast_hash": "9fa6b41670905e61f6b2ac67f3e722b5",
+    "semantic_hash": "9fa6b41670905e61f6b2ac67f3e722b5"
+  },
+  "src/navigation/screens/ChangeAppointmentTimeScreen.tsx": {
+    "mtime": 1788548792.690393,
+    "seen": 1790154414.4987574,
+    "ast_hash": "033f4d7f15c33901ac44c71363592624",
+    "semantic_hash": "033f4d7f15c33901ac44c71363592624"
+  },
+  "src/navigation/screens/ChangePasswordScreen.tsx": {
+    "mtime": 1788548899.8080273,
+    "seen": 1790154414.4987607,
+    "ast_hash": "94027355054313faf25c6dfce05b3bb5",
+    "semantic_hash": "94027355054313faf25c6dfce05b3bb5"
+  },
+  "src/navigation/screens/DoctorDashboardScreen.tsx": {
+    "mtime": 1788548792.6950684,
+    "seen": 1790154414.4987636,
+    "ast_hash": "764f9f268c48761fdf96732609421077",
+    "semantic_hash": "764f9f268c48761fdf96732609421077"
+  },
+  "src/navigation/screens/HomeScreen.tsx": {
+    "mtime": 1789709632.126795,
+    "seen": 1790154414.4987667,
+    "ast_hash": "07e55fc9697d72bcd461996b5c3af6c1",
+    "semantic_hash": "07e55fc9697d72bcd461996b5c3af6c1"
+  },
+  "src/navigation/screens/LoginScreen.tsx": {
+    "mtime": 1788548792.6862102,
+    "seen": 1790154414.49877,
+    "ast_hash": "337fadc0e61652fbdda465fb67d37fac",
+    "semantic_hash": "337fadc0e61652fbdda465fb67d37fac"
+  },
+  "src/navigation/screens/PatientProfile.tsx": {
+    "mtime": 1788548792.6970658,
+    "seen": 1790154414.4987726,
+    "ast_hash": "a91ad3cb0ba7fb30cab83582e32656ed",
+    "semantic_hash": "a91ad3cb0ba7fb30cab83582e32656ed"
+  },
+  "src/navigation/screens/PatientRegistrationScreen.tsx": {
+    "mtime": 1788548899.809013,
+    "seen": 1790154414.4987755,
+    "ast_hash": "db36e405f804277a496d14c80be8acb5",
+    "semantic_hash": "db36e405f804277a496d14c80be8acb5"
+  },
+  "src/types.d.ts": {
+    "mtime": 1784612945.948769,
+    "seen": 1790154414.4987786,
+    "ast_hash": "888eb607c3628d52ea646bf040625171",
+    "semantic_hash": "888eb607c3628d52ea646bf040625171"
+  },
+  "src/utils/adminApi.ts": {
+    "mtime": 1788550237.7853591,
+    "seen": 1790154414.4987817,
+    "ast_hash": "69fc811b2e566c2d594d7b7c1a63474b",
+    "semantic_hash": "69fc811b2e566c2d594d7b7c1a63474b"
+  },
+  "src/utils/appAlert.ts": {
+    "mtime": 1788548792.7170095,
+    "seen": 1790154414.4987848,
+    "ast_hash": "7a1537ec4c3e75ae9087534fa7a66966",
+    "semantic_hash": "7a1537ec4c3e75ae9087534fa7a66966"
+  },
+  "src/utils/confirmAction.ts": {
+    "mtime": 1788537076.4151888,
+    "seen": 1790154414.4987879,
+    "ast_hash": "3ec16b837da5e6e63735b9c54939788b",
+    "semantic_hash": "3ec16b837da5e6e63735b9c54939788b"
+  },
+  "tsconfig.json": {
+    "mtime": 1784612945.9511447,
+    "seen": 1790154414.4987907,
+    "ast_hash": "ad971a60aa0dd55a091e4e87776fdef6",
+    "semantic_hash": "ad971a60aa0dd55a091e4e87776fdef6"
+  }
+}
